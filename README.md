@@ -4,5 +4,12 @@
 
 ### [MENU]
 
-- About Code-development
-    - [about_podman](about_codedev/about_podman.md)
+- Code-development Notes
+    - [Podman](about_system/about_podman.md)
+    - [Terminal](about_system/about_terminal.md)
+
+- CGI Notes
+    - [Blender](about_cgi/about_blender.md)
+
+- AIGC Notes
+    - [Midjourney](about_aigc/about_midjourney.md)

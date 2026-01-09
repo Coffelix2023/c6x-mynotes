@@ -1,13 +1,8 @@
----
-created: { { data } }
-tags: [知识管理, 笔记, Zed]
----
+## Podman管理容器
 
-# Podman管理容器
+用 [Podman](https://github.com/containers/podman) 管理docker的images/containers/pods/compose
 
-> 用 podman 管理docker的images/containers/pods/compose
-
-> https://github.com/containers/podman
+[返回索引](../README.md)
 
 ```bash
 brew install podman

@@ -18,3 +18,7 @@
     - [Godot 笔记](about_gamedev/godot/about_godot.md)
     - [RPG-Maker-Mz 笔记](about_gamedev/about_rpgmaker.md)
     - [其他游戏引擎](about_gamedev/OT_gameEngines.md)
+- Code & Language
+    - Python
+        - [uv 笔记](about_python/about_uv.md)
+        - [pyenv 笔记](about_python/about_pyenv.md)

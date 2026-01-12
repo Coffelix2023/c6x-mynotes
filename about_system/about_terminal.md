@@ -194,3 +194,72 @@ scutil --nwi : 获取当前Network information
         mamba install -y <package>  #安装并选择yes
         mamba uninstall <package>  #删除包
 ```
+
+---
+
+- 备份
+
+```bash
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+
+via Conda
+[ roop ]@ condo activate env-faceswap
+python run.py --execution-provider coreml
+installation question
+conda install pytorch torchvision torchaudio -c pytorch
+conda install -c conda-forge [xxx] (包含更多软件包)
+
+[ faceswap ]@ condo activate deepfake
+
+
+conda clean —all
+conda clean -a
+# 清除缓存
+
+conda install pytorch torchvision torchaudio -c pytorch
+conda install -c conda-forge [xxx] (包含更多软件包)
+
+# [vpnc install]
+root用户：sudo -i
+IPSec gateway tw.us.flow.host
+IPSec ID home
+IPSec secret [***]
+Xauth username [username]
+Xauth password [***]
+
+# 终端格式化
+diskutil list
+diskutil eraseVolume FAT32 NAME /dev/diskxxx
+
+# [windows]
+安装vnc
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+# [Nuke]
+拾取工程文件名称
+    # [python {os.path.basename(nuke.root().name()).split(".")[0]}]
+    # [file rootname [file tail [value root.name]]]
+
+# [Ubuntu 显卡驱动相关]
+# 罗列驱动：
+ubuntu-drivers devices
+ubuntu-drivers list
+
+# 删除：
+sudo apt-get remove ...
+卸载驱动：sudo apt purge ...
+
+# 如果附加驱动不能正确选择：
+sudo ubuntu-drivers autoinstall
+编辑 /etc/modprobe.d/blacklist-nouveau.conf 文件，末行添加
+blacklist nouveau
+
+
+blender -b /path.blender -s 1001 -e 1100 -a -t 12
+用12线程渲染制定文件
+
+
+b293 /Volumes/XYM_2T/TNK0130_Felix2T/BLENDER/GoundSplash_render_PS_EVE_v001.blend -b -a
+b293 /Volumes/XYM_2T/TNK0130_Felix2T/BLENDER/GoundSplash_render_S_EVE_v001.blend -b -a
+
+```

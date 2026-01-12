@@ -171,3 +171,145 @@
 # Entropy
     熵, 衡量数据的随机性或不确定性, 高值->随机, 低值->规律.
 ```
+
+- 语言笔记
+
+```bash
+* 标记语言 : Markup
+    * 描述 数据 的 结构 与 语义
+    * HTML / XML / Markdown
+* 样式表语言 : Style-Sheet
+    * 描述 Markup 文档的 外观 与 表现形式
+    * CSS / Sass / Scss
+* 查询语言 : Query
+    * 从 数据库 / 信息系统 / 数据流 中 请求 与 获取 数据
+    * SQL / GraphQL
+* 编程语言 : Programming
+    * 人与计算机沟通的载体, 能够表达 算法 和 逻辑 的语言
+    * C++ / Java / Python / JS / TS / RUST / Go
+    * 编程语言分类
+        * 过程式编程 (Procedural)
+            * C : 编译型语言
+        * 面向对象编程(Object-Oriented, OOP)
+            * Java : 即时编译型
+            * C++ : 编译型语言
+            * C# : 即时编译型
+            * Python : 解释型语言
+        * 声明式编程 ( Declarative)
+            * JS/TS : 即时编译型
+            * Rust : 编译型语言
+    * 编译型 : 代码执行前由 编译器 一次性完整翻译,可生成执行文件
+    * 解释型 : 代码由 解释器 在运行时逐行翻译并执行
+```
+
+- 备份
+
+```bash
+
+Node.js 运行环境
+    - 构建工具
+        Vite
+        Webpack
+    - UI框架
+        React
+            > Next.js
+            > Wasp.js
+            > Refine.js : 专攻后台
+        Vue
+            > Nuxt.js
+        Svelte
+            > SvelteKit
+        Qwik
+        Solid.js
+        Angular
+
+    - 后端框架 : 服务器端框架
+        Nest.js
+        Express.js
+        Ember.js
+        Hono.js
+分类模块
+- 前端框架
+- UI组件库
+    负责 视觉风格 和 交互体验, 提前预制提高效率
+- 路由
+    负责骨架, 决定 结构 和 导航
+- 状态管理
+    负责血液, 驱动 更新 和 交互
+- HTTP客户端
+- 认证与授权
+    负责用户入口
+- 数据持久 和 离线支持
+    用户本地的数据仓库
+    web: localStorage / sessionStorage / IndexedDB
+    跨平台: AsyncStorage(React Native) / SQLite / WatermelonDB
+- 原生 API 抽象层
+    负责统一跨平台API
+    一般框架会自带: Tauri, React Native, Capacitor
+- 构建系统与工具链
+    负责打包
+    Vite / webpack / tauri-cli / babel
+- i18n 国际化
+    负责多语言
+    i18next, react-i18next, vue-i18n
+开发流程
+* 1.目标用户群体
+* 竞品分析
+前期可以模仿或者轻量的平替
+* 设计:
+1. 产品功能构想
+2. MVP最小可行产品设计
+3. 技术架构方案选定
+4. UI设计/前端构建/后端构建
+* 测试
+1. 功能测试
+2. 性能测试
+3. 压力测试
+4. 安全测试
+* 部署
+1. 云平台存储(比如: AWS/ Axure / 阿里云等)
+2. 数据库服务器部署
+3. CI/ CD
+    - 定义: 持续集成与持续部署,DevOps核心实践之一, 包括以下阶段
+        1. source : 提交, 触发构建
+        2. build : 构建, 编译打包
+        3. test : 测试, 单元测试, 集成测试, 安全扫描
+        4. deliver : 部署到测试环境
+        5. deploy : 发布到生产环境(持续部署)
+4. 建立自动化的测试和发布流程, 实现快速可靠的更新
+* 营销
+留住用户, SaaS的命脉.
+- 用户引导 : 快速上手
+- 技术支持 : 帮助文档与在线客服等
+- 主动关怀 : 主动联系用户,帮助用户更好地利用产品创造价值
+- 数据分析 : 流水/流失率/用户生命周期价值
+- 行为分析 : 寻找改进点和新机会
+- 商业决策 : 定价策略/产品路线图
+架构划分
+* UI层 : UI Layer
+    - 功能: 负责用户界面与交互
+    - 模块: UI组件
+    - 框架举例:
+        - React + Next.js
+        - Vue + SvelteKit(Quik/Nuxt.js等)
+* 逻辑层 : Logic Layer
+	- 功能: 处理业务逻辑/数据/访问控制等
+    - 模块: 导航(路由)/ 状态管理 / 业务逻辑
+    - 框架举例:
+        - js/ts : Fastify (Express等)
+        - Python : FastAPI / Flask / Django
+* 构建层 : Build Layer
+	- 功能: 静态资源解析/ 打包/ 热更新/ 增量构建/构建上线产物
+    - 模块: 构建打包
+    - 工具举例:
+        - Vite
+        - Farm : Rust+Vite兼容
+* 数据层 : Data Layer
+	- 功能: 持久化用户/业务等数据
+    - 模块: 用户入口(Auth)/ API集成/ 数据集成
+    - 工具举例:
+        - SQL数据库 : MySQL / SQLite / PostgreSQL
+        - NoSQL : Mongodb / Firestore / Redis / Cassandra
+        - ORM : Prisma / Mongoose / TypeORM
+
+```

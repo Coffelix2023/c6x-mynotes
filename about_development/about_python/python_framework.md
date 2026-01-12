@@ -35,9 +35,13 @@
     ```
 
 - [NiceGUI](https://nicegui.io/)
+    - 用 Python 轻松创建基于 Web 的用户界面
     - 开源的 Python 库，用于编写可在浏览器中运行的图形用户界面。它学习曲线平缓，同时又提供了高级自定义选项。NiceGUI 遵循后端优先的设计理念：它负责处理所有 Web 开发细节，让您可以专注于编写 Python 代码。这使得它非常适合各种项目，包括短脚本、仪表盘、机器人项目、物联网解决方案、智能家居自动化和机器学习
 
     ```python
+    # installation:
+        python3 -m pip install nicegui
+       	from nicegui import ui
     # Text Elements
     from nicegui import ui
         ui.label : 标签

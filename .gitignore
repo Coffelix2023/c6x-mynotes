@@ -57,6 +57,7 @@ downloads/
 eggs/
 .eggs/
 **/.mydocs/
+.iwe/
 lib/
 lib64/
 parts/

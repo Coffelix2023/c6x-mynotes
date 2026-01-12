@@ -1,6 +1,6 @@
 # c6x-mynotes
 
--=-=-=-=-=-=>  Personal notes Library  <=-=-=-=-=-=-
+-=-=-=-=-=-={ Personal notes Library }=-=-=-=-=-=-
 
 ### [MENU]
 

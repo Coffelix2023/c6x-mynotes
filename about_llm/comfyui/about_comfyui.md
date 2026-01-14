@@ -2,7 +2,7 @@
 
 [返回索引](../../README.md)
 
-- 开发笔记
+#### 📒 开发笔记
 
 [ComfyUI-Frontend 笔记](comfy_frontend.md)
 

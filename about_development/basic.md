@@ -4,7 +4,7 @@
 
 ---
 
-```cfg
+```bash
 # API
 	全称 : Application Programming Interface
 	调用函数通信接口, 通信菜单,但需要双向编写, 通常是本地函数或远程调用

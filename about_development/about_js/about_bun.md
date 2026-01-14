@@ -18,7 +18,7 @@
     bun upgrade
 ```
 
-- Bun 和 Node.js 区别
+- 🔘 Bun 和 Node.js 区别
 
 ```bash
 # 引擎不同

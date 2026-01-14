@@ -41,6 +41,8 @@
 
 ```
 
+---
+
 ### 📒 [Qwik](https://qwik.dev/)
 
 ```bash
@@ -68,7 +70,25 @@ pnpm start
 
 ---
 
-### 📒 小程序框架(Miniapp Framework)
+#### 🔘 [Astro](https://astro.build/) ([查看仓库](https://github.com/withastro/astro))
+
+> 面向内容驱动型网站的 Web 框架,
+> [查看官方文档](https://docs.astro.build/zh-cn/concepts/why-astro/)
+
+```bash
+# quick start
+    npm create astro@latest
+```
+
+---
+
+#### 🔘 [Dioxus](https://dioxuslabs.com/) ([查看仓库](https://github.com/DioxusLabs/dioxus))
+
+> 适用于 Web、桌面和移动设备的全栈应用程序框架, 使用 Rust 编程语言构建跨平台应用程序的框架。只需一套代码库，即可构建可在 Web、桌面和移动平台上运行的应用程序([查看文档](https://dioxuslabs.com/learn/0.7/))
+
+---
+
+#### 🔘 小程序框架(Miniapp Framework)
 
 - Dcloud
     - 最早的小程序开发团队, 官网

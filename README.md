@@ -2,12 +2,15 @@
 
 > Personal notes Library
 
-### [MENU]
+---
+
+## [MENU]
 
 ### 📒 Global System Notes
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
 - [Terminal 笔记](about_system/about_terminal.md)
+- [Env PATH 配置笔记](about_system/about_env.md)
 - [Git 笔记](about_system/about_git.md)
 - [Podman 笔记](about_system/about_podman.md)
 - [Runpod 笔记](about_system/about_runpod.md)
@@ -31,6 +34,7 @@
     - [python 框架笔记](about_development/about_python/python_framework.md)
     - [uv 笔记](about_development/about_python/about_uv.md)
     - [pyenv 笔记](about_development/about_python/about_pyenv.md)
+
 - JS/TS
     - [JS/TS 基础概念](about_development/about_js/js_basic.md)
     - [JS Framework 框架笔记](about_development/about_js/js_framework.md)
@@ -43,12 +47,12 @@
     - [Rust 笔记](about_development/about_languages/about_rust.md)
 - Ruby
     - [Ruby 笔记](about_development/about_languages/about_ruby.md)
-- [基础概念笔记](about_development/basic.md)
-- [Web 笔记](about_development/about_web.md)
-- [关于许可证类型](about_development/about_license.md)
-- [IDE 笔记](about_development/about_ide.md)
-- [Tauri 笔记](about_development/about_tauri.md)
-- [Svelte 笔记](about_development/about_svelte.md)
+    - [基础概念笔记](about_development/basic.md)
+    - [Web 笔记](about_development/about_web.md)
+    - [关于许可证类型](about_development/about_license.md)
+    - [IDE 笔记](about_development/about_ide.md)
+    - [Tauri 笔记](about_development/about_tauri.md)
+    - [Svelte 笔记](about_development/about_svelte.md)
 
 ### 📒 CGI Notes
 

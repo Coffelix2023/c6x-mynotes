@@ -81,10 +81,11 @@
 
 ```
 
-### 📒 [Fnm 环境管理工具]
+### 📒 [Fnm (Node.js环境管理)](https://github.com/Schniz/fnm)
+
+> rust编写的现代 node.js 环境管理工具
 
 ```bash
-# rust编写的现代node环境管理工具
 # installation
     通过官方sh #推荐
     brew install fnm
@@ -92,15 +93,16 @@
 # fnm常用指令
     fnm install 20
     fnm use 20
-    fnm ls
+    fnm ls  #查看已安装的node.js版本
+    fnm current  #查看当前目录下的node.js版本
     fnm ls-remote | grep v20  // 查看官方已发布的所有版本
     fnm default 20 # 全局默认版本指定
     echo “20” > .node-version  // 特定目录指定版本
 # fnm版本控制流程:
     fnm use 18 (将项目中安装指定node版本)
     node —version > .node-version (版本控制)
-
-# nvm
-    nvm # nodejs 环境管理工具, 老牌稳定, 而 fnm 更现代,推荐使用fnm
-
 ```
+
+### 📒 nvm
+
+> nvm # nodejs 环境管理工具, 老牌稳定, 而 fnm 更现代,推荐使用fnm

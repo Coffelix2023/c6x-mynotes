@@ -4,9 +4,12 @@
 
 **Personal notes Library**
 
-### 📒 Global System Notes
+</div>
 
-- [Homebrew 笔记](about_system/about_homebrew.md)
+## 📒 Global System Notes
+
+### [Homebrew 笔记](about_system/about_homebrew.md)
+
 - [Terminal 笔记](about_system/about_terminal.md)
 - [Env PATH 配置笔记](about_system/about_env.md)
 - [Git 笔记](about_system/about_git.md)

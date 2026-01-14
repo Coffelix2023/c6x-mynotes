@@ -6,17 +6,23 @@
 
 </div>
 
-## 📒 Global System Notes
+### 📒 Global System Notes
 
-### [Homebrew 笔记](about_system/about_homebrew.md)
+#### [Homebrew 笔记](about_system/about_homebrew.md)
 
-- [Terminal 笔记](about_system/about_terminal.md)
-- [Env PATH 配置笔记](about_system/about_env.md)
-- [Git 笔记](about_system/about_git.md)
-- [Podman 笔记](about_system/about_podman.md)
-- [Runpod 笔记](about_system/about_runpod.md)
-- [DevTools 笔记](about_system/about_devtools.md)
-- [Fedora 笔记](about_system/about_fedora.md)
+#### [Terminal 笔记](about_system/about_terminal.md)
+
+#### [Env PATH 配置笔记](about_system/about_env.md)
+
+#### [Git 笔记](about_system/about_git.md)
+
+#### [Podman 笔记](about_system/about_podman.md)
+
+#### [Runpod 笔记](about_system/about_runpod.md)
+
+#### [DevTools 笔记](about_system/about_devtools.md)
+
+#### [Fedora 笔记](about_system/about_fedora.md)
 
 ### 📒 LLM & AIGC Notes
 

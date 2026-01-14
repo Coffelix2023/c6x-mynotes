@@ -1,10 +1,10 @@
+<div align="center">
+
 # c6x-mynotes
 
 > Personal notes Library
 
----
-
-## [MENU]
+## [📖 MENU]
 
 ### 📒 Global System Notes
 

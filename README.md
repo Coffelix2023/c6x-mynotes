@@ -9,20 +9,14 @@
 ### 📒 Global System Notes
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
-
 - [Terminal 笔记](about_system/about_terminal.md)
-
 - [Env PATH 配置笔记](about_system/about_env.md)
-
 - [Git 笔记](about_system/about_git.md)
-
 - [Podman 笔记](about_system/about_podman.md)
-
 - [Runpod 笔记](about_system/about_runpod.md)
-
 - [DevTools 笔记](about_system/about_devtools.md)
-
 - [Fedora 笔记](about_system/about_fedora.md)
+-
 
 ### 📒 LLM & AIGC Notes
 
@@ -36,21 +30,22 @@
 
 ### 📒 Development
 
-#### 🔘 Python
+[Python]
 
 - [python 基础笔记](about_development/about_python/python_basic.md)
 - [python 框架笔记](about_development/about_python/python_framework.md)
 - [uv 笔记](about_development/about_python/about_uv.md)
 - [pyenv 笔记](about_development/about_python/about_pyenv.md)
 
-- JS/TS
-    - [JS/TS 基础概念](about_development/about_js/js_basic.md)
-    - [JS Framework 框架笔记](about_development/about_js/js_framework.md)
-    - [React 笔记](about_development/about_js/about_react.md)
-    - [Vue 笔记](about_development/about_js/about_vue.md)
-    - [Vite 笔记](about_development/about_js/about_vite.md)
-    - [Node.js 笔记](about_development/about_js/about_nodejs.md)
-    - [Bun 笔记](about_development/about_js/about_bun.md)
+[JS/TS]
+
+- [JS/TS 基础概念](about_development/about_js/js_basic.md)
+- [JS Framework 框架笔记](about_development/about_js/js_framework.md)
+- [React 笔记](about_development/about_js/about_react.md)
+- [Vue 笔记](about_development/about_js/about_vue.md)
+- [Vite 笔记](about_development/about_js/about_vite.md)
+- [Node.js 笔记](about_development/about_js/about_nodejs.md)
+- [Bun 笔记](about_development/about_js/about_bun.md)
 - Rust
     - [Rust 笔记](about_development/about_languages/about_rust.md)
 - Ruby

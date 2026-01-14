@@ -2,7 +2,7 @@
 
 [返回索引](../README.md)
 
-### 📒 局域网连接Fedora Jupyter的方法
+- 🔘 [**局域网连接Fedora Jupyter的方法**]
 
 ```bash
 # Fedora启用ssh
@@ -22,7 +22,7 @@
     * 最佳实践: 进入jupyter后启动comfy
 ```
 
-### 📒 GPU配置与调试 记录
+- 🔘 [**GPU配置与调试记录**]
 
 ```bash
 - Network-Volume地区选择: EU-RO-1.
@@ -51,17 +51,16 @@
       ✅ 合计: 3 mins
 ```
 
-### 📒 Pod配置与命令(ubuntu)
-
-- 注意:
-    - /etc/bash/.bashrc是系统级配置
-    - /root/.bashrc是用户级配置
-- 环境变量配置(创建Pod时设定 Environment Variables)
-    - HF_HOME: /workspace/cache/huggingface_hub/
-    - HF_TOKEN
-    - POD_API_KEY:
-- 传输
-    - 通过runpodctl进行传输:
+- 🔘 [**RunPod: Pod配置与命令(ubuntu)**]
+    - 注意:
+        - /etc/bash/.bashrc是系统级配置
+        - /root/.bashrc是用户级配置
+    - 环境变量配置(创建Pod时设定 Environment Variables)
+        - HF_HOME: /workspace/cache/huggingface_hub/
+        - HF_TOKEN
+        - POD_API_KEY:
+    - 传输
+        - 通过runpodctl进行传输:
 
     ```bash
       runpodctl get pod
@@ -70,10 +69,10 @@
       runpodctl ssh list-keys #列出sshkey($HOME/.ssh/id_ed25519.pub)
     ```
 
-- 访问: https://[POD_ID]-[PORT].proxy.runpod.net
+    - 访问: https://[POD_ID]-[PORT].proxy.runpod.net
 
-- 目录结构配置:
-    - 主目录存放在临时容器(速度快)
+- 🔘 [**目录结构配置**]
+-   - 主目录存放在临时容器(速度快)
         - COMFY_DIR="/home/ComfyUI"
     - custom_nodes
         - NODES_DIR="/home/ComfyUI/custom_nodes"
@@ -82,7 +81,7 @@
         - 输入输出目录存放持久卷
             - EXTRA_DIR="/workspace/app/extra_comfy"
             - user: 备份在/workspace/app
-- Remote SSH 连接
+- 🔘 [**Remote SSH 连接**]
     - 验证
 
     ```bash
@@ -110,39 +109,35 @@
     # 即:在ssh over exposed TCP 的ssh
     ```
 
-### 📒 Cloudflare设置
+- 🔘 [**Cloudflare设置**]
+    - cloudflared tunnel --url [comfy-localhost]
+    - comfy中, 主机port设置为经过cloudflare隧道的地址(不包含http://)
 
-`cloudflared tunnel --url <comfy-localhost>`
+    ```bash
+    # Network Volume设置
+        S3 API操作
+        # Buket name: lu32bps947
+        # endpoint URL: https://s3api-us-ca-2.runpod.io
+        # access_key_id: [secret_access_key]
+        # 示例
+        aws s3 ls --region us-ca-2 \
+                    --endpoint-url [rul]
+    ```
 
-comfy中, 主机port设置为经过cloudflare隧道的地址(不包含http://)
-
-```bash
-# Network Volume设置
-    S3 API操作
-    # Buket name: lu32bps947
-    # endpoint URL: https://s3api-us-ca-2.runpod.io
-    # access_key_id: [secret_access_key]
-    # 示例
-    aws s3 ls --region us-ca-2 \
-                --endpoint-url [rul]
-```
-
-- Rclone: 操作network-volume
+- 🔘 [**Rclone: 操作network-volume**]
     - 安装: brew install rclone
     - 用法:
         - rclone config #交互式配置
 
-- 通过VScode Remote SSH 访问 pod(文档链接)
+- 🔘 [**通过VScode Remote SSH 访问 pod**]
+    - 复制 pod 的 SSH over exposed TCP
+        - 示例: ssh root@[ip_address] -p [port] -i ~/.ssh/id_ed25519
+    - 修改 $HOME/.ssh/config, 添加ssh信息如下:
 
-- 复制 pod 的 SSH over exposed TCP
-    - 示例: ssh root@[ip_address] -p [port] -i ~/.ssh/id_ed25519
-
-- 修改 $HOME/.ssh/config, 添加ssh信息如下:
-
-```bash
-  Host c6x-5090X2 #自定义名称
-  HostName [ip_adress] #暴露的端口
-  User root
-  Port 25920
-  IdentityFile ~/.ssh/id_ed25519
-```
+    ```bash
+    Host c6x-5090X2 #自定义名称
+    HostName [ip_adress] #暴露的端口
+    User root
+    Port 25920
+    IdentityFile ~/.ssh/id_ed25519
+    ```

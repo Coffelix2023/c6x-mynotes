@@ -1,10 +1,8 @@
 ## LLM-Agent 笔记
 
-> 常用 LLM Local-Agents 一览
+**常用 LLM Local-Agents 一览**
 
 [返回索引](../README.md)
-
----
 
 - [LMS (lm-studio)](https://lmstudio.ai/)
 

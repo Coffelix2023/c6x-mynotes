@@ -19,56 +19,90 @@
 
 ### 📒 About LLM & AIGC
 
+[**ComfyUI**]
+
+- [ComfyUI Index](about_llm/comfyui/comfyui_index.md)
 - [ComfyUI 笔记](about_llm/comfyui/about_comfyui.md)
+
+[**LLM**]
+
+- [LLM 基础](about_llm/llm_basic.md)
 - [System Prompts 系统提示词示例](about_llm/about_system_prompts.md)
-- [LLM Agent 笔记](about_llm/about_agent.md)
-- [LangFlow 笔记](about_llm/about_langflow.md)
-- [Ollama 笔记](about_llm/about_ollama.md)
 - [MCP Servers 笔记](about_llm/about_mcp.md)
 - [Midjourney 笔记](about_llm/about_midjourney.md)
 
+[**Agent**]
+
+- [常用 Agent 笔记](about_llm/about_agent.md)
+- [Ollama 笔记](about_llm/about_ollama.md)
+
+[**技术笔记**]
+
+- [Faceswap 笔记](about_llm/about_faceswap.md)
+
+[**流程构建**]
+
+- [LangChain 笔记](about_llm/about_langchain.md)
+- [LangFlow 笔记](about_llm/about_langflow.md)
+
 ### 📒 About Development
 
-- [**Python**]
-    - [python 基础笔记](about_development/about_python/python_basic.md)
-    - [python 框架笔记](about_development/about_python/python_framework.md)
-    - [uv 笔记](about_development/about_python/about_uv.md)
-    - [pyenv 笔记](about_development/about_python/about_pyenv.md)
+[**Python**]
 
-- [**JS/TS**]
-    - [JS/TS 基础概念](about_development/about_js/js_basic.md)
-    - [JS Framework 框架笔记](about_development/about_js/js_framework.md)
-    - [React 笔记](about_development/about_js/about_react.md)
-    - [Vue 笔记](about_development/about_js/about_vue.md)
-    - [Vite 笔记](about_development/about_js/about_vite.md)
-    - [Node.js 笔记](about_development/about_js/about_nodejs.md)
-    - [Bun 笔记](about_development/about_js/about_bun.md)
+- [基础概念](about_development/about_python/python_basic.md)
+- [python 框架笔记](about_development/about_python/python_framework.md)
+- [uv 笔记](about_development/about_python/about_uv.md)
+- [pyenv 笔记](about_development/about_python/about_pyenv.md)
 
-[**Rust**]
+[**JS/TS**]
+
+- [基础概念](about_development/about_js/js_basic.md)
+- [JS Framework 框架笔记](about_development/about_js/js_framework.md)
+- [React 笔记](about_development/about_js/about_react.md)
+- [Vue 笔记](about_development/about_js/about_vue.md)
+- [Vite 笔记](about_development/about_js/about_vite.md)
+- [Node.js 笔记](about_development/about_js/about_nodejs.md)
+- [Bun 笔记](about_development/about_js/about_bun.md)
+
+[**Program Language**]
 
 - [Rust 笔记](about_development/about_languages/about_rust.md)
-
-[**Ruby**]
-
 - [Ruby 笔记](about_development/about_languages/about_ruby.md)
-- [基础概念笔记](about_development/basic.md)
-- [Web 笔记](about_development/about_web.md)
-- [关于许可证类型](about_development/about_license.md)
-- [IDE 笔记](about_development/about_ide.md)
+
+[**Build Tool**]
+
 - [Tauri 笔记](about_development/about_tauri.md)
 - [Svelte 笔记](about_development/about_svelte.md)
 
-### 📒 About CGI
-
-- [Blender 笔记](about_cgi/about_blender.md)
-
-### 📒 About Game Development
-
-- [Godot 笔记](about_gamedev/godot/about_godot.md)
-- [RPG-Maker-Mz 笔记](about_gamedev/about_rpgmaker.md)
-- [其他游戏引擎](about_gamedev/OT_gameEngines.md)
-
-### 📒 About Database
+[**Database**]
 
 - [Database 基础笔记](about_development/about_database/databasic.md)
 - [Nginx 笔记](about_development/about_database/about_nginx.md)
+
+[**OT**]
+
+- [基础概念](about_development/basic.md)
+- [IDE 笔记](about_development/about_ide.md)
+- [Web 笔记](about_development/about_web.md)
+- [关于许可证类型](about_development/about_license.md)
+
+### 📒 About CGI
+
+[**Blender**]
+
+- [Blender 技术笔记](about_cgi/about_blender.md)
+- [Blender 测试笔记](about_cgi/bl_tstNotes.md)
+
+### 📒 About Game Development
+
+[**Godot**]
+
+- [Godot 笔记](about_gamedev/godot/about_godot.md)
+- [StateMachine 笔记](about_gamedev/godot/gd_state_machine.md)
+- [Minigame 笔记](about_gamedev/godot/gd_minigame.md)
+- [示例笔记](about_gamedev/godot/gd_samples.md)
+
+[**OT Engines**]
+
+- [RPG-Maker-Mz 笔记](about_gamedev/about_rpgmaker.md)
+- [其他游戏引擎](about_gamedev/OT_gameEngines.md)

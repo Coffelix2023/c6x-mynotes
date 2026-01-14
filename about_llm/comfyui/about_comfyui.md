@@ -1,56 +1,10 @@
-## ComfyUI 笔记
+## ComfyUI 基础笔记
 
 [返回索引](../../README.md)
 
-#### 📒 开发笔记
-
-[ComfyUI-Frontend 笔记](comfy_frontend.md)
-
-[ComfyUI-Routes 笔记](comfy_routes.md)
-
-[ComfyUI-Samplers 采样器笔记](comfy_samplers.md)
-
-[ComfyUI-Schedulers 调度器笔记](comfy_schedulers.md)
-
-[ComfyUI-Latent 潜在空间笔记](comfy_latent.md)
-
-[ComfyUI-Themes 笔记](comfy_themes.md)
-
-[ComfyUI-API-V3-Schema 笔记](comfy_v3schema.md)
-
-- 提示词参考
-
-[提示词库参考](prompts.md)
-
-- 模型笔记
-
-[ComfyUI-Qwen 笔记](comfy_qwen.md)
-
-[ComfyUI-Wan 笔记](comfy_wan.md)
-
-[ComfyUI-Flux 笔记](comfy_flux.md)
-
-[ComfyUI-HunYuanVideo 笔记](comfy_hyvideo.md)
-
-[ComfyUI-SDXL 笔记](comfy_sdxl.md)
-
-[ComfyUI-LoRA 笔记](comfy_lora.md)
-
-[ComfyUI-Audio 笔记](comfy_audio.md)
-
-[ComfyUI-TextEncoder 笔记](comfy_textencoder.md)
-
-- Custom_Nodes
-
-[ComfyUI-CustomNodes 笔记](comfy_customnodes.md)
-
-[ComfyUI-RES4LFY 笔记](comfy_res4lyf.md)
-
----
-
 ### 📒 基础
 
-```cfg
+```bash
 
 # 终端连接felixdora: ssh felix@192.168.0.121
 # 远程控制(需felixdora开启屏幕共享): open vnc://192.168.0.121
@@ -73,7 +27,7 @@
 
 ### 📒 模型快速总结
 
-```cfg
+```bash
 
 # 图像模型
     🔮 Flux1
@@ -124,7 +78,7 @@
 
 ### 📒 自定义子图(subgraph)节点
 
-```cfg
+```bash
 
 * 导入模型
     SG_Load_Flux
@@ -156,7 +110,7 @@
 
 - MODELS
 
-```cfg
+```bash
 
     ** RescaleCFGAdvanced (推荐)
         变化较小,但细节增强,默认值,或者 start=0.05, end=0.5, multi=1
@@ -205,7 +159,7 @@
 
 - SAMPLERS
 
-```cfg
+```bash
 
     ** DetailDaemonSampler (推荐)
         连接到基础采样器后面,增强图像细节
@@ -218,7 +172,7 @@
 
 - SCHEDULER & SIGMAS
 
-```cfg
+```bash
 
     ## scheduler主要是调整sigma曲线,随着step推近, sigma值下降越快去噪越多.
         - 由此可以解释model sampling的原理,它是为了调整sigma曲率的作用:
@@ -244,7 +198,7 @@
 
 - GUIDER
 
-```cfg
+```bash
 
     ** PerpNegGuider
         比基础CFGGuider增加了垂直负向引导的分量, 会显著增加耗时,效果无明显变化,可不用
@@ -253,7 +207,7 @@
 
 - LATENT
 
-```cfg
+```bash
 
 # 图像的潜在空间(计算机识别的图像数据),通过:
     -Vae encoder: 压缩潜在空间的方法
@@ -267,7 +221,7 @@
 
 ---
 
-```cfg
+```bash
 # 基础备份(未整理)
 
 # 关于CFG

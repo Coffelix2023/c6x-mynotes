@@ -2,14 +2,6 @@
 
 [返回索引](../../README.md)
 
-[StateMachine 笔记](gd_state_machine.md)
-
-[Minigame 笔记](gd_minigame.md)
-
-[示例笔记](gd_samples.md)
-
----
-
 ### 📒 Godot 插件
 
 - 插件识别两个重要文件:

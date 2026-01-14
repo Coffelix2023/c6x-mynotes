@@ -2,9 +2,7 @@
 
 # c6x-mynotes
 
-> Personal notes Library
-
-## [📖 MENU]
+**Personal notes Library**
 
 ### 📒 Global System Notes
 

@@ -1,6 +1,6 @@
 ## Python Framework 笔记
 
-[返回索引](../README.md)
+[返回索引](../../README.md)
 [查看 Python 新手指南](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
 
 ---

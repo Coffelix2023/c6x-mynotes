@@ -8,10 +8,10 @@
 
 - 🔘 [**uv**](https://docs.astral.sh/uv/)
 
-> 现代python管理工具,rust编写速度极快)
-
 ```bash
-# brew install uv
+# 现代python管理工具, rust编写速度极快)
+# quick start
+    brew install uv
 PATH : /opt/homebrew/bin/uv
 Conda 也安装隔离uv 版本
 设置export PATH, 确保python/pip 优先读取Conda环境

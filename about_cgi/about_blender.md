@@ -2,30 +2,48 @@
 
 [返回索引](../README.md)
 
-## 🔘 Blender-cli
+[**常用链接**]
+
+- [Blender5.0 手册](https://docs.blender.org/manual/en/5.0/index.html)
+- [Blender Python API](https://docs.blender.org/api/4.2/info_quickstart.html)
+- [插件开发基础教程](https://docs.blender.org/manual/en/4.2/advanced/scripting/addon_tutorial.html#)
+- [Blender 环境目录](https://docs.blender.org/manual/en/5.0/advanced/blender_directory_layout.html#)
+
+🔘 [**Blender-Cli**]
+
+- [管理扩展的命令-官方文档](https://docs.blender.org/manual/en/5.0/advanced/command_line/extension_arguments.html#)
 
 ```bash
-blender -c(--command) extension list (-h)  # 打印blender addons
+blender -c(--command) extension list (-h)  # 列出已安装的 blender addons
 blender -c extension update # 更新所有扩展
 ```
 
-### 🔘 Blender Addon 笔记
-
-> [官方基础教程](https://docs.blender.org/manual/en/5.0/advanced/scripting/addon_tutorial.html#intended-audience)
+🔘 [**Blender Extension/Addon 笔记**]
 
 ```bash
 # [重要更新]
 # blender5.0版本推进Extensions体系,将扩展打造为流程标准化.
-- blender_manifest.toml
-    # 统一元数据入口
-    # 兼容性与安全/权限声明的载体（随着扩展体系发展越来越重要）
-    # 分发/更新机制依赖, 统一分发与版本管理
-- 使用 blender -c extension build 进行构建(而非散装的*.py或zip)
+# 构建前检查(无需构建)
+    blender -c extension validate
+# 构建扩展(单个.py文件的插件归于旧版)
+    blender -c extension build
 ```
 
----
+🔘 [**Blender 插件开发**]
 
-### 🔘 Tips
+- 两个主要文件:
+    - `__init__.py`
+        - 入口文件
+        - 定义 `bl_info` (可选, 新版已经在`manifest`中体现)
+        - 注册/反注册：`register()` / `unregister()`
+        - 导入并注册各个模块里的 `classes`
+        - 核心逻辑（网络请求、解析、线程、UI 细节）放在单独模块里
+    - `blender_manifest.toml`
+        - 统一元数据入口
+        - 兼容性与安全/权限声明的载体（随着扩展体系发展越来越重要）
+        - 分发/更新机制依赖, 统一分发与版本管理
+
+🔘 [**Tips**]
 
 ```bash
 # 渲染设置
@@ -36,11 +54,9 @@ blender -c extension update # 更新所有扩展
     bpy.ops.object.vertex_group_remove(all=True)
 ```
 
----
+🔘 [**ACES Settings**]
 
-### 🔘 ACES Settings
-
-```bash
+```
 逻辑: Blende输出保证与Nuke中显示一样
 working space: ACEScg ( linear )
 View transform: sRGB-ACES ( Output - sRGB)

@@ -1,8 +1,24 @@
 ## Basic 基础概念和原理笔记
 
+_about_development/basic.md_
+
 [返回索引](../README.md)
 
 ---
+
+- 🔘 开发文件与代码命名惯例(规则)
+
+    ```bash
+    # python project (PEP8)
+        代码命名规则:
+            -内部代码,包括: module/pacage/function/var
+            snake_case  #小写与下划线
+        classes 类命名规则:
+            PascalCase
+    # js/ts project
+    ```
+
+- 🔘 扫盲区
 
 ```bash
 # API

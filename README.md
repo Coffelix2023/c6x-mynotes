@@ -51,8 +51,6 @@
 
 - [基础概念](about_development/about_python/python_basic.md)
 - [python 框架笔记](about_development/about_python/python_framework.md)
-- [uv 笔记](about_development/about_python/about_uv.md)
-- [pyenv 笔记](about_development/about_python/about_pyenv.md)
 
 [**JS/TS**]
 
@@ -84,6 +82,7 @@
 - [基础概念](about_development/basic.md)
 - [IDE 笔记](about_development/about_ide.md)
 - [Web 笔记](about_development/about_web.md)
+- [Markdown 笔记](about_development/about_md.md)
 - [关于许可证类型](about_development/about_license.md)
 
 ### 📒 About CGI

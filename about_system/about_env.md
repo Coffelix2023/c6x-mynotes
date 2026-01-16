@@ -52,7 +52,7 @@ export PNPM_HOME="${XDG_CONFIG_HOME}/pnpm"
     export FNM_PATH="${XDG_DATA_HOME}/fnm"
 
     # fnm 初始化 path 优先级处理
-    # 配置必须放入 .zshrc 中,否则无效
+    # 配置必须放入 .zshrc 中(因为command命令还未定义),否则无效
     if command -v fnm >/dev/null 2>&1; then  #检测 fnm 命令是否存在
         eval "$(fnm env --use-on-cd --shell zsh)"  #根据目录自动切换版本
     fi

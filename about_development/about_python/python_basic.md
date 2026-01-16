@@ -2,80 +2,149 @@
 
 [返回索引](../../README.md)
 
-### 📒[Astral.sh Products](https://astral.sh/)
+### 📒 [Astral.sh](https://astral.sh/) (uv/ruff/ty)
 
 > Astral用Rust 编写的 uv, ruff, ty
 
-- 🔘 [**uv**](https://docs.astral.sh/uv/)
+- 🔘 [uv](https://docs.astral.sh/uv/) ([查看仓库](https://github.com/astral-sh/uv))
 
 ```bash
 # 现代python管理工具, rust编写速度极快)
 # quick start
     brew install uv
-PATH : /opt/homebrew/bin/uv
-Conda 也安装隔离uv 版本
-设置export PATH, 确保python/pip 优先读取Conda环境
-
-* uv常用指令
-    * uv pip install
-    照顾旧版本: python -m // pip installl等
-    * uv pip list
-    * uv init
-    * uv venv
-    * pip list --not-required
-    列出全局手动装的pip包
-    * pip cache purge
-    * pip check
-    类似brew doctor
-
-* uv 创建项目流程
-    * uv init
-    * uv venv ...
-    根据init后的toml创建python版本,默认是3.11+
-    * source .venv/bin/activate
-    * which python
-    验证venv是否部署成功
+    brew upgrade uv
+    # or
+    python -m pip install -U uv
+    uv self update
+# PATH读取顺序: conda -> venv -> system
+# 根据官网步骤 enable shell autocompletion for uv cmd
+    echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
+# 常用指令
+    uv cache clean/prune  # 清理缓存
+    uv python list  # 列出 python 版本安装信息
+    uv init     #创建 python 项目
+    uv add      #添加dependency, uv add --dev (添加开发依赖)
+    uv remove   #移除dependency
+    uv sync     #根据 pyproject.toml 同步到env(会自动创建venv)
+    uv run      #运行指令
+    uv tool run #等价于 uvx
+        # 使用uvx, 工具会被安装到临时的、隔离的环境中
 ```
 
-### 🔘 Python LSP - 语言服务器
+- 🔘 [ty](https://docs.astral.sh/ty/) ([查看仓库](https://github.com/astral-sh/ty))
 
-- [**PYRIGHT**](https://microsoft.github.io/pyright/#/)
+```bash
+# 用 Rust 编写的、速度极快的 Python 类型检查器和语言服务器
+# quick start:
+	uvx ty check  #不安装ty的情况下运行检查
+	uv add --dev tu	#利用uv在toml中添加开发包依赖
+	python -m pip install -U ty
+     brew install ty
+     ty check
+# 
+```
+
+- 🔘 [ruff](https://docs.astral.sh/ruff/tutorial/) ([查看仓库](https://github.com/astral-sh/ruff))
+
+```bash
+
+```
+
+---
+
+### 📒 Python LSP - 语言服务器
+
+- 🔘 [Pyright](https://microsoft.github.io/pyright/#/)
 
 ```bash
 # python静态类型检查器
 ```
 
-- basedpyright
-    - test
-- ty
-- ruff
+- 🔘 [basedpyright]
 
-### 🔘 Python Formatter - 格式化工具
-
-- black
-
-### 🔘 常用代码块
-
+```bash
+# pyright的升级版本
 ```
-    flake8: 检查脚本错误和未使用的import(F401), flake8 file.py
-    autoflake: 自动清洁, 终端显示修改内容
-        --remove-all-unused-imports -i file.py
-    isort: 对import进行排序和整理,用法: isort file.py
 
-====== 递归创建父目录 #若目录不存在,从父目录开始递归创建
+---
+
+### 📒 Python Lint & Formatter - 质量检查与格式化
+
+> 可以先尝试用ruff + ty (官方推荐)
+
+- 🔘 [black](https://github.com/psf/black)
+
+```bash
+# 毫不妥协的 Python 代码格式化程序
+# installation
+    python -m pip install -U black
+```
+
+- 🔘 [flake8](https://github.com/PyCQA/flake8)
+
+```bash
+# 检查脚本错误和未使用的import(F401), 示例: flake8 file.py
+# installation:
+    python -m pip install -U flake8
+```
+
+- 🔘 [autoflake](https://github.com/PyCQA/autoflake)
+
+```bash
+# 会从 Python 代码中移除未使用的导入语句和变量。它利用 pyflakes 来实现自动清洁
+# installation:
+    python -m pip install -U autoflake
+    autoflake --remove-all-unused-imports -i file.py
+```
+
+- 🔘 [isort](https://github.com/PyCQA/isort)
+
+```bash
+# 对导入的文件进行排序(import sort in py)
+# installation:
+    python -m pip install -U isort
+    isort file.py
+```
+
+---
+
+### 📒 Python 版本管理
+
+- 🔘 [Pyenv](https://github.com/pyenv/pyenv)
+
+```bash
+# 轻量的 python 版本管理, 轻松地在多个 Python 版本之间切换.
+# pyenv 只专注于 python版本管理,不负责包依赖管理.
+
+# installation:
+    brew install pyenv
+    pyenv install 3.12.10   #安装特定版本python
+    pyenv global 3.12.10    #全局默认版本设置
+    pyenv local 3.12.10     #项目目录内设定版本
+    pyenv versions          #列出Pyhon版本
+```
+
+---
+
+- 备份: 常用函数与代码块
+
+```python
+# >>> 这是在comfyui扩展开发过程积累的部分常用函数 <<<
+
+# ====== 递归创建父目录 #若目录不存在,从父目录开始递归创建
 def ensure_parent_dir(name: str) -> None:
 parent = os.path.dirname(name)
 if parent and not os.path.exists(parent):
 os.makedirs(parent, exist_ok=True)
 
-====== 规范化路径 #规划化之后进行检查,如果不存在则递归创建,可代替ensure_parent_dir()
+# ====== 规范化路径 #规划化之后进行检查,如果不存在则递归创建,可代替ensure_parent_dir()
 def safe_mkdir(path: str) -> str:
 p = os.path.expanduser(os.path.expandvars(path))
 p = os.path.abspath(os.path.normpath(p))
 os.makedirs(p, exist_ok=True)
 return p
 
-====== 拆分提示词为数组
+# ====== 拆分提示词为数组
 
 # 示例: input = "a girl, red hair, white upper"
 
@@ -86,7 +155,7 @@ return p
         parts = re.split(r'[.,\n;]+',s)
         return [p.strip() for p in parts if p and p.strip()]
 
-====== 清理非法字符
+# ====== 清理非法字符
 def clean*string(name: Optional[str]) -> str:
 if name is None:
 print("⚠️ 来自clean_string: 文件不存在")
@@ -102,7 +171,7 @@ s = s.replace(" ", "_")
 s = re.sub(r"[^A-Za-z0-9_\-\.]", "\_", s)
 return s
 
-====== 拆分每个字符
+# ====== 拆分每个字符
 
 # 示例: input = "a girl, red"
 
@@ -120,7 +189,7 @@ return s
                 result.append(str(item))
         return result
 
-====== 去重并保持原顺序
+# ====== 去重并保持原顺序
 
 # 示例: input = "a girl, girl"
 
@@ -135,7 +204,7 @@ return s
                 seen.add(x)
         return out
 
-====== 拼接
+# ====== 拼接
 
 # 需要 flatten_inputs, unique_text,
 
@@ -168,7 +237,7 @@ return s
             tokens = unique_text(tokens)
         return sep.join(tokens)
 
-====== yaml预设
+# ====== yaml预设
 
 # ====== 📌 map的文本结构(字典dict):
 
@@ -215,7 +284,7 @@ return s
     name = set()  #创建一个集合{}, 无序去重的集合.
     params: Optional[str] = None  #在comfy execute中, params允许函数调用时为None
 
-====== 图像相关
+# ====== 图像相关
 
 # ========== 📌 通过图像名称获取图像路径
 
@@ -251,7 +320,7 @@ return s
     #查看图像
     _img_open = node_helpers.pillow(Image.open, _img_path)
 
-====== 常用命令备忘
+# ====== 常用命令备忘
 
 # ====== import click
 

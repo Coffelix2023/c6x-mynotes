@@ -1,6 +1,6 @@
 ## Basic 基础概念和原理笔记
 
-_about_development/basic.md_
+[_about_development/basic.md_]
 
 [返回索引](../README.md)
 

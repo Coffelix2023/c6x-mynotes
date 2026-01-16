@@ -1,5 +1,7 @@
 ## Terminal 终端笔记
 
+[_about_system/about_terminal.md_]
+
 [返回索引](../README.md)
 
 ### 📒 常用规则
@@ -50,9 +52,14 @@
 
 ```bash
 - curl
-  macOS默认安装 : /usr/bin/curl
+    # macOS默认安装 : /usr/bin/curl
+- command
+    # zsh内建指令, 查看某个指令的类型( command -V CMD )
+- type
+    # 类似command
 - man
   man <commander> 查看某个包或程序的manual, Q退出
+  # 可以用 glow 命令(brew install glow)更美观的预览
 - unzip
   macOS默认安装 : /usr/bin/unzip
 - winget

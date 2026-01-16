@@ -1,9 +1,21 @@
 ## Python Framework 笔记
 
+[_about_development/about_python/python_framework.md_]
+
 [返回索引](../../README.md)
+
 [查看 Python 新手指南](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
 
 ---
+
+```bash
+# 快速创建python项目
+    uv init PROJECT_NAME
+    cd PROJECT_NAME
+    uv sync  #自动创建.venv
+    uv add PACKAGE | uv add --dev PACKAGE ( uv remove --dev PACKAGE)
+
+```
 
 ### 📒 常用 Python 框架
 

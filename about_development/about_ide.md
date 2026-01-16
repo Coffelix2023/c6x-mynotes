@@ -28,7 +28,7 @@
         brew install zed
 
     # >>>>> 使用笔记
-        1. 为单独项目设置zed环境:
+        - 为单独项目设置zed环境:
             path: project_dir/.zed/settings.json
                 #但无法设置themes覆盖(截止version Zed 0.219.4 )
     ```

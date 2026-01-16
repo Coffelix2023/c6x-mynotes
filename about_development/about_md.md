@@ -38,16 +38,40 @@
         # 一款适用于 Firefox 和 Google Chrome 的扩展程序，用于剪辑网站并将其下载为可读的 Markdown 文件
     ```
 
+- 🔘 [glow](https://github.com/charmbracelet/glow)
+
+    ```bash
+    # 命令行界面渲染markdown
+    # 也可用于终端预览其他文档, 可替代 cat, 得到美观的阅读体验
+    # installation
+        brew install glow
+        glow FILE
+        glow -s [dark | light]
+        glow -p(--pages) FILE  #按man方式查看
+    ```
+
 - 🔘 其他工具
 
     ```bash
     # 大部分经过短期和长期测试后弃用, 最终锁定:
         Multi-Markdowns: Zed Editor (MacOS)
         Single-Mardown: MarkEdit (MacOS)
-    # 以下是跨平台的 markdown 工具, 大部分通过 brew install 可以安装
-        QLmarkdown   # MacOS 快速查看md
-        Obsidian     # 主流的博客/数字花园(md群集)工具, 付费使用
-        Macdown      # MacOS上开源markdown工具
-        Marktext     # 简洁优雅的 Markdown 编辑器，适用于 Linux、macOS 和 Windows 系统
-
     ```
+
+    - 以下是跨平台的 markdown 工具, 大部分通过 brew install 可以安装
+        - QLmarkdown
+            - MacOS 快速查看md
+        - Obsidian
+            - 主流的博客/数字花园(md群集)工具, 付费使用
+        - [Macdown]()
+            - MacOS上开源markdown工具
+        - [Marktext]()
+            - 简洁优雅的 Markdown 编辑器，适用于 Linux、macOS 和 Windows 系统
+        - [notable](https://notable.app/) ([仓库](https://github.com/notable/notable))
+            - 另一款简洁的markdwon editor
+        - [koodo](https://koodoreader.com/zh) ([仓库](https://github.com/koodo-reader/koodo-reader))
+            - 电子书阅读器(有在线版本)
+        - [wiki.js](https://js.wiki/) ([仓库](https://github.com/requarks/wiki))
+            - 可扩展开源 wiki 编辑器
+        - [docsify](https://docsify.js.org/#/quickstart)
+            - 官方定义: 一个神奇的文档网站生成器

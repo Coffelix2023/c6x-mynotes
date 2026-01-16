@@ -2,7 +2,7 @@
 
 [_about_development/basic.md_]
 
-[返回索引](../README.md)
+[_返回索引_](../README.md)
 
 ---
 
@@ -10,12 +10,29 @@
 
     ```bash
     # python project (PEP8)
-        代码命名规则:
-            -内部代码,包括: module/pacage/function/var
-            snake_case  #小写与下划线
-        classes 类命名规则:
-            PascalCase
-    # js/ts project
+        - 代码(module/package/function/var)
+            snake_case          # 小写与下划线
+        - classes类:
+            PascalCase          # 大驼峰
+        - project name:
+            kebab-case          # 小写与连字符
+        - dir name/filename:
+            snake_case
+        - constant:
+            UPPER_SNAKE_CASE    # 全大写与下划线
+    # js/Node.js project
+        - function/var
+            camelCase           # 小驼峰
+        - classes/React组件
+            PascalCase          # 大驼峰
+        - project name:
+            kebab-case          # 小写与连字符
+        - dir name:
+            snake_case
+        - filename/npm脚本:
+            kebab-case          # 小写与连字符
+        - constant:
+            UPPER_SNAKE_CASE    # 全大写与下划线
     ```
 
 - 🔘 扫盲区

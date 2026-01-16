@@ -7,19 +7,25 @@
 
     ```bash
     # 常用指令
-    brew install …
-    brew update (更新brew)
-    brew updated
+    brew install ...
+    brew update     #更新 brew 主程序
     brew autoremove
     brew cleanup
-    brew upgrade … : brew upgrade-reset (强制更新,截止2025-06-28是version 4.5.8)
+    brew upgrade    #brew upgrade-reset (强制更新,截止2025-06-28是version 4.5.8)
     brew info ...
     brew uninstall ...
     brew search ...
     brew home ...
     brew info ...
     brew list ...
-    brew tap <package> : 不再brew上面的专属包, brew tap 查看已经记录的地址
+    brew tap ...    #不在 homebrew上面的专属包, brew tap 查看已经记录的地址
+
+    # 健康检查
+    brew doctor     #健康检查
+    brew missing    #查看缺失包依赖
+    brew uses --installed --recursive ...  #查看安装包的依赖关系
+        #如何有包依赖过期或者失效可以卸载不需要的工具或重新安装更新依赖关系
+        brew reinstall ...
     ```
 
 ---

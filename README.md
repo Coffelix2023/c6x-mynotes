@@ -12,6 +12,7 @@
 - [Terminal 笔记](about_system/about_terminal.md)
 - [Env PATH 配置笔记](about_system/about_env.md)
 - [Git 笔记](about_system/about_git.md)
+- [Conda 笔记](about_system/about_conda.md)
 - [Podman 笔记](about_system/about_podman.md)
 - [Runpod 笔记](about_system/about_runpod.md)
 - [DevTools 笔记](about_system/about_devtools.md)

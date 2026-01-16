@@ -1,11 +1,28 @@
-## Podman管理容器
+## Podman 管理容器
 
+[_about_system/about_podman.md_]
 
 [返回索引](../README.md)
 
 ---
 
-> 用 [Podman](https://github.com/containers/podman) 管理docker的images/containers/pods/compose
+- 🔘 常用的容器管理工具
+
+```bash
+    Docker : 容器生态系统创始者,由于过于庞大复杂而选择podman更节省生命
+    Podman : Docker平替, 无守护进程的开源 Linux 原生工具
+        # 常用 cli 解决问题 的首选,无需UI界面
+    OrbStack : 运行 Docker 容器和 Linux 的快速、轻量级且简便的解决方案。使用我们这款 Docker Desktop 替代方案，实现光速开发
+        # OrbStack同Podman一样很好用, UI界面美观, 但收费
+    Container : 一款用于在 Mac 上使用轻量级虚拟机创建和运行 Linux 容器的工具。它使用 Swift 编写，并针对 Apple Silicon 进行了优化
+        # 仅针对macos, 但推荐用 Podman
+
+```
+
+- 🔘 [PODMAN](https://podman.io/) ([查看仓库](https://github.com/containers/podman))
+
+> 用 Podman管理docker的images/containers/pods/compose
+
 ```bash
 brew install podman
 

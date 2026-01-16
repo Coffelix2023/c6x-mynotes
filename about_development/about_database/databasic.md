@@ -1,8 +1,25 @@
 ## Database 数据库基础笔记
 
+[_about_development/about_database/databasic.md_]
+
 [返回索引](../../README.md)
 
 ---
+
+- 🔘 [Postgres - 关系型数据库](https://dsf.berkeley.edu/postgres.html) ([官方FQ](https://dsf.berkeley.edu/postgres-v4r2/postgres.faq))
+
+    ```bash
+    # 目的是为数据库研究中新理念的实现测试提供平台和基础
+    # 证明本质上是关系型数据库管理系统可以扩展以处理复杂对象、规则，并且具有高度可扩展性
+    # POSTGRES 是由加州大学伯克利分校 Michael Stonebraker 教授指导的一个数据库研究项目
+    # 为了便于研究工作，他们创建了一个软件测试平台，即 POSTGRES 数据库管理系统 (DBMS)。POSTGRES DBMS 可以是扩展关系型数据库，也可以是面向对象数据库，具体取决于当时的流行趋势.
+    ```
+
+- 🔘 [PostgreSQL - 对象关系数据库管理系统](https://www.postgresql.org/)
+    ```bash
+    # 开源对象关系数据库系统(使用并扩展了 SQL 语言)
+    # 旨在帮助开发者构建应用程序，帮助管理员保护数据完整性并构建容错环境，并帮助您管理各种规模的数据集
+    ```
 
 ```bash
 # what's Database?

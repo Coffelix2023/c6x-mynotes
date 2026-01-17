@@ -12,11 +12,14 @@ My personal notes & development environment configuration
 
 ### Content
 
-- [About System](#About-System)
-- [About LLM & AIGC](#About-LLM--AIGC)
-- [About Development](#About-Development)
+- [About System](#📒-About-System)
+- [About LLM & AIGC](#📒-About-LLM--AIGC)
+- [About Development](#📒-About-Development)
+- [About CGI](#📒-About-CGI)
+- [About Game Development](#📒-About-Game-Development)
+- [Personal Configuration](#📒-Personal-Configuration)]
 
-### About System
+### 📒 About System
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
 - [Terminal 笔记](about_system/about_terminal.md)

@@ -131,16 +131,9 @@ export CF_LOCAL="${HOME}/ComfyUI"                   # 本地 ComfyUI HOME
 export CF_DISK="${DIR_CREATIVE}/ComfyUI_libs"       # Extra ComfyUI目录(外置硬盘)
 export MYNODES="${CF_LOCAL}/custom_nodes/cfx_nodes" # 本地 ComfyUI 节点开发目录
 
-# 导入.mycomfy.zsh( 我的 ComfyUI 配置)
-if [[ -r "${ZDOTDIR}/.mycomfy.zsh" && -f "${ZDOTDIR}/.mycomfy.zsh" ]]; then
-    source "${ZDOTDIR}/.mycomfy.zsh"
+# 导入.comfy.zsh( 我的 ComfyUI 配置)
+if [[ -r "${ZDOTDIR}/.comfy.zsh" && -f "${ZDOTDIR}/.comfy.zsh" ]]; then
+    source "${ZDOTDIR}/.comfy.zsh"
 else
-    echo "[.zshenv错误] ${ZDOTDIR}/.mycomfy.zsh 不存在"
-fi
-
-# 导入 .mysecret.zsh(我的api-key)
-if [[ -f "${ZDOTDIR}/.mysecret.zsh" && -r "${ZDOTDIR}/.mysecret.zsh" ]]; then
-    source "${ZDOTDIR}/.mysecret.zsh"
-else
-    echo "[.zshenv错误] ${ZDOTDIR}/.mysecret.zsh 不存在"
+    echo "[.zshenv错误] ${ZDOTDIR}/.comfy.zsh 不存在"
 fi

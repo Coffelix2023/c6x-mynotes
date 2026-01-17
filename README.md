@@ -10,6 +10,11 @@
 
 My personal notes & development environment configuration
 
+### [Menu]
+
+- [About System](#About System)
+-
+
 ### 📒 About System
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
@@ -110,3 +115,10 @@ My personal notes & development environment configuration
 
 - [RPG-Maker-Mz 笔记](about_gamedev/about_rpgmaker.md)
 - [其他游戏引擎](about_gamedev/OT_gameEngines.md)
+
+### 📒 Personal Configuration
+
+- [zshenv](config/zshenv)
+- [zprofile](config/zprofile)
+- [zshrc](config/zshrc)
+- [comfy.zsh](config/comfy.zsh)

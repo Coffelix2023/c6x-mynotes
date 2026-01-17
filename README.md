@@ -1,12 +1,12 @@
 <div align="center">
 
-# c6x-mynotes
+<h1 id="top">c6x-mynotes</h1>
 
 **Personal notes Library**
 
 </div>
 
-<h2 id="what">What is this?</h2>
+## What is this?
 
 My personal notes & development environment configuration
 
@@ -129,4 +129,4 @@ My personal notes & development environment configuration
 
 ---
 
-[Back Top](#what)
+[Back Top](#top)

@@ -1,0 +1,146 @@
+# ${HOME}/.zshenv
+# >>>>>>>> [update 2026-01-17] >>>>>>>>
+
+# ------------------------ 📒 基础 XDG 路径
+ZDOTDIR="${HOME}/.zsh"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
+export XDG_RUNTIME_DIR="/tmp/runtime-$UID"
+# XDG guard
+for d in "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME" "$XDG_DATA_HOME" "$XDG_STATE_HOME"; do
+    [[ -d "$d" ]] || mkdir -p "$d"
+done
+
+# ------------------------ 📒 Python
+export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
+export UV_CACHE_DIR="${XDG_CACHE_HOME}/uv"
+export PIPX_HOME="${XDG_DATA_HOME}/python/pipx"
+export PIPX_BIN_DIR="${XDG_DATA_HOME}/python/bin"
+export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
+export KERAS_HOME="${XDG_STATE_HOME}/keras"
+export MPLCONFIGDIR="${XDG_CONFIG_HOME}/matplotlib"
+
+# ------------------------ 📒 ts_node
+export TS_NODE_HISTORY="${XDG_STATE_HOME}/ts_node_repl_history"
+
+# ------------------------ 📒 less.js
+export LESSHISTFILE="${XDG_STATE_HOME}/less/history"
+
+# ------------------------ 📒 sqlite
+export SQLITE_HISTORY="${XDG_CACHE_HOME}/sqlite_history"
+
+# ------------------------ 📒 .NET
+export DOTNET_CLI_HOME="${XDG_DATA_HOME}/dotnet"
+export NUGET_PACKAGES="${XDG_CACHE_HOME}/NuGetPackages"
+
+# ------------------------ 📒 android
+export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
+
+# ------------------------ 📒 minikube
+export MINIKUBE_HOME="${XDG_DATA_HOME}/minikube"
+
+# ------------------------ 📒 Ruby & bundle & gems
+export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle"
+export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
+export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
+export GEM_HOME="${XDG_DATA_HOME}/gem"
+export GEM_SPEC_CACHE="${XDG_CACHE_HOME}/gem"
+
+# ------------------------ 📒 aws
+export AWS_SHARED_CREDENTIALS_FILE="${XDG_CONFIG_HOME}/aws/credentials"
+export AWS_CONFIG_FILE="${XDG_CONFIG_HOME}/aws/config"
+
+# ------------------------ 📒 jupyter
+export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
+
+# ------------------------ 📒 docker
+export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
+
+# ------------------------ 📒 java
+export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java -Djavafx.cachedir=${XDG_CACHE_HOME}/openjfx"
+
+# ------------------------ 📒 npm & pnpm
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
+export PNPM_HOME="${XDG_CONFIG_HOME}/pnpm"
+
+# ------------------------ 📒 Bun (JavaScript 和 TypeScript 应用的一体化工具包)
+export BUN_INSTALL="${XDG_DATA_HOME}/bun"
+export BUN_BIN_DIR="${BUN_INSTALL}/bin"
+
+# ------------------------ 📒 Rust & Cargo
+export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
+export CARGO_HOME="${XDG_DATA_HOME}/cargo"
+if [[ -s "${CARGO_HOME}/env" ]]; then
+    source "${CARGO_HOME}/env"
+else
+    echo "[zshenv错误] $${CARGO_HOME}/env 不存在!"
+fi
+
+# ------------------------ 📒 node.js & fnm 管理工具
+export NODE_REPL_HISTORY="${XDG_DATA_HOME}/node_repl_history"
+export FNM_PATH="${XDG_DATA_HOME}/fnm"
+
+# ------------------------ 📒 Huggingface
+export HF_HOME="/Volumes/C6X4T/LLM/huggingface_hub/models_cache"
+
+# ------------------------ 📒 Ollama & LMstudio
+export OLLAMA_MODELS="/Volumes/C6X4T/LLM/Agentic/Ollama"
+export OLLAMA_MAX_LOADED_MODELS=2
+export LMSTUDIO_HOME="${XDG_CONFIG_HOME}/lmstudio"
+
+# ------------------------ 📒 Nuke Licenses
+export foundry_LICENSE=5053@localhost
+export SFX_LICENSE_SERVER=5053@localhost
+# export PATH=$PATH:foundry_LICENSE: SFX_LICENSE_SERVER
+
+# ------------------------ 📒 Proxy
+#export http_proxy="http://127.0.0.1:7890"
+#export HTTP_PROXY="http://127.0.0.1:7890"
+#export https_proxy="http://127.0.0.1:7890"
+#export HTTPS_PROXY="http://127.0.0.1:7890"
+
+# ------------------------ 🔮 C6X 配置
+export HOMEBREW_NO_ENV_HINTS=1
+export HF_HUB_ENABLE_HF_TRANSFER=1
+export MAC_4T="/Volumes/C6X4T"
+export BLENDER_DIR="/Users/felix/Library/Application Support/Blender/5.0"
+export NAS_DIR="sshd@192.168.0.101:/mnt/HD/HD_a2/Library/ComfyNas/"
+
+## 常用DIR ##
+export DIR_LLM="${MAC_4T}/LLM"           # 大语言模型与人工智能目录(外置硬盘)
+export DIR_DEV="${MAC_4T}/Codev"         # 代码开发目录(外置硬盘)
+export DIR_CREATIVE="${MAC_4T}/Creative" # 创作目录(外置硬盘)
+export DIR_GAMEDEV="${MAC_4T}/Gamedev"   # 游戏开发目录(外置硬盘)
+export DIR_LOCAL="${HOME}/c6x_local"     # 本地工作空间
+
+export MYNOTES="${DIR_LOCAL}/c6x-mynotes"       # 我的笔记 git 仓库
+export SPACE_PY="${DIR_LOCAL}/space_py"         # 本地 python 开发目录
+export SPACE_BL="${DIR_LOCAL}/space_blender"    # 本地 Blender 插件开发目录
+export SPACE_GD="${DIR_LOCAL}/space_godot"      # 本地 Godot 插件开发目录
+export SPACE_GH="${DIR_LOCAL}/space_github"     # 本地 git 仓库
+export SPACE_DOCKER="${DIR_LOCAL}/space_docker" # 本地 Docker/Podman 容器开发目录
+export SPACE_NJS="${DIR_LOCAL}/space_nodejs"    # 本地 node.js 开发目录
+
+export GODOT_HOME="${MAC_4T}/Gamedev/Godot"            # Godot 工作目录(外置硬盘)
+export RPG_HOME="${MAC_4T}/Gamedev/RPGmaker"           # RPGmaker 工作目录(外置硬盘)
+export FACEFUSION_HOME="${MAC_4T}/Creative/facefusion" # facefusion 仓库(外置硬盘)
+
+export CF_LOCAL="${HOME}/ComfyUI"                   # 本地 ComfyUI HOME
+export CF_DISK="${DIR_CREATIVE}/ComfyUI_libs"       # Extra ComfyUI目录(外置硬盘)
+export MYNODES="${CF_LOCAL}/custom_nodes/cfx_nodes" # 本地 ComfyUI 节点开发目录
+
+# 导入.mycomfy.zsh( 我的 ComfyUI 配置)
+if [[ -r "${ZDOTDIR}/.mycomfy.zsh" && -f "${ZDOTDIR}/.mycomfy.zsh" ]]; then
+    source "${ZDOTDIR}/.mycomfy.zsh"
+else
+    echo "[.zshenv错误] ${ZDOTDIR}/.mycomfy.zsh 不存在"
+fi
+
+# 导入 .mysecret.zsh(我的api-key)
+if [[ -f "${ZDOTDIR}/.mysecret.zsh" && -r "${ZDOTDIR}/.mysecret.zsh" ]]; then
+    source "${ZDOTDIR}/.mysecret.zsh"
+else
+    echo "[.zshenv错误] ${ZDOTDIR}/.mysecret.zsh 不存在"
+fi

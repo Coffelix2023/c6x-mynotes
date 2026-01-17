@@ -6,22 +6,22 @@
 
 </div>
 
-### What is this?
+<h2 id="what">What is this?</h2>
 
 My personal notes & development environment configuration
 
-### Content
+## Content
 
 - [About System](#system)
-- [About LLM & AIGC](#About-LLM--AIGC)
-- [About Development](#About-Development)
-- [About CGI](#About-CGI)
-- [About Game Development](#About-Game-Development)
+- [About LLM & AIGC](#llm)
+- [About Development](#dev)
+- [About CGI](#cgi)
+- [About Game Development](#game-dev)
 - [Personal Configuration](#cfg)
 
 ---
 
-<h3 id="system">📒 About System</h3>
+<h2 id="system">📒 About System</h2>
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
 - [Terminal 笔记](about_system/about_terminal.md)
@@ -35,7 +35,7 @@ My personal notes & development environment configuration
 
 ---
 
-### 📒 About LLM & AIGC
+<h2 id="llm">📒 About LLM & AIGC</h2>
 
 [**ComfyUI**]
 
@@ -65,7 +65,7 @@ My personal notes & development environment configuration
 
 ---
 
-### 📒 About Development
+<h2 id="dev">📒 About Development</h2>
 
 [**Python**]
 
@@ -107,7 +107,7 @@ My personal notes & development environment configuration
 
 ---
 
-### 📒 About CGI
+<h2 id="cgi">📒 About CGI</h2>
 
 [**Blender**]
 
@@ -116,7 +116,7 @@ My personal notes & development environment configuration
 
 ---
 
-### 📒 About Game Development
+<h2 id="game-dev">📒 About Game Development</h2>
 
 [**Godot**]
 
@@ -132,9 +132,13 @@ My personal notes & development environment configuration
 
 ---
 
-<h3 id="cfg">📒 Personal Configuration</h3>
+<h2 id="cfg">📒 Personal Configuration</h2>
 
 - [zshenv](config/zshenv)
 - [zprofile](config/zprofile)
 - [zshrc](config/zshrc)
 - [comfy.zsh](config/comfy.zsh)
+
+---
+
+[Back Top](#what)

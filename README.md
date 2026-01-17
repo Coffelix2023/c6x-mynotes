@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1 id="top">c6x-mynotes</h1>
+# c6x-mynotes
 
 **Personal notes Library**
 
@@ -129,4 +129,4 @@ My personal notes & development environment configuration
 
 ---
 
-[Back Top](#top)
+[Back Top](#c6x-mynotes)

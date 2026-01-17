@@ -15,7 +15,7 @@ My personal notes & development environment configuration
 - [About System](#About System)
 -
 
-### 📒 About System
+### About System
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
 - [Terminal 笔记](about_system/about_terminal.md)

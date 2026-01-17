@@ -6,18 +6,18 @@
 
 </div>
 
-## What is this?
+## - What is this?
 
 My personal notes & development environment configuration
 
-## Content
+## - Content
 
 - [About System](#system)
 - [About LLM & AIGC](#llm)
 - [About Development](#dev)
 - [About CGI](#cgi)
 - [About Game Development](#game-dev)
-- [Personal Configuration](#cfg)
+- [Personal Configuration](#Personal-Configuration)
 
 <h2 id="system">📒 About System</h2>
 
@@ -120,7 +120,7 @@ My personal notes & development environment configuration
 - [RPG-Maker-Mz 笔记](about_gamedev/about_rpgmaker.md)
 - [其他游戏引擎](about_gamedev/OT_gameEngines.md)
 
-<h2 id="cfg">📒 Personal Configuration</h2>
+## Personal Configuration
 
 - [zshenv](config/zshenv)
 - [zprofile](config/zprofile)

@@ -1,35 +1,49 @@
-## Python Basic 基础笔记
+<h1 id="top">Python Basic 基础笔记</h1>
 
-[返回索引](../../README.md)
+[about_development/about_python/python_basic.md]
 
-- [扫盲区]
-    - [PyPA](https://www.pypa.io/en/latest/)
-        - Python 打包权威机构 (PyPA) 是一个工作组，负责维护 Python 打包中使用的核心软件项目集
-    - [PyPI](https://pypi.org/)
-        - python 官方软件包仓库
-    - [Setuptools](https://setuptools.pypa.io/en/latest/) ([仓库](https://github.com/pypa/setuptools))
-        - Python 默认的构建工具,主要用于python的依赖包开发.
-        - 轻松下载、构建、安装、升级和卸载 Python 包
-        - installation: `pip install --upgrade setuptools[core]`
-    - [pip](https://pip.pypa.io/en/stable/) ([仓库](https://github.com/pypa/pip))
-        - Python 的包安装程序,您可以使用它从 Python 包索引和其他索引安装包
-        - pip 随python一起安装, 通过 `python -m pip install -U pip`来升级
-        - `pip install`
-        - `python -m pip install` #指定Python 解释器 python 来执行 pip
-        - `pip install -r requirements.txt` #安装需求文档内的包依赖
-        - `pip freeze` #列出当前环境安装的包及其版本(锁定), 添加 `> requirements.txt`
-        - `pip cache dir` #显示pip cache 目录
-        - `python -m ensurepip --upgrade` #这是一个特殊指令(如果找不到pip)
-    - [pipx](https://pipx.pypa.io/stable/)
-        - [pipx/pip等工具的官方对比解释](https://pipx.pypa.io/stable/comparisons/)
-        - 在隔离环境中安装和运行 Python 应用程序,每个程序各自有独立虚拟环境
-        - pipx依赖于 pip 和 venv
-        - pipx 取代了 pip 的部分功能；它允许你安装命令行应用程序，但不能安装你在代码中导入的库
-        - pipx和brew都可以安装应用程序(来源不同)
+[返回首页](../../README.md)
+
+## Content
+
+- [扫盲区](#base)
+- [Astral.sh | uv,ruff,ty](#astral)
 
 ---
 
-### 📒 [Astral.sh](https://astral.sh/) (uv/ruff/ty)
+<h3 id="base">Base | 扫盲区</h3>
+
+- [PyPA](https://www.pypa.io/en/latest/)
+    - Python 打包权威机构 (PyPA) 是一个工作组，负责维护 Python 打包中使用的核心软件项目集
+- [PyPI](https://pypi.org/)
+    - python 官方软件包仓库
+- [Setuptools](https://setuptools.pypa.io/en/latest/) ([仓库](https://github.com/pypa/setuptools))
+    - Python 默认的构建工具,主要用于python的依赖包开发.
+    - 轻松下载、构建、安装、升级和卸载 Python 包
+    - installation: `pip install --upgrade setuptools[core]`
+- [pip](https://pip.pypa.io/en/stable/) ([仓库](https://github.com/pypa/pip))
+    - Python 的包安装程序,您可以使用它从 Python 包索引和其他索引安装包
+    - pip 随python一起安装, 通过 `python -m pip install -U pip`来升级
+    - `pip install`
+    - `python -m pip install` #指定Python 解释器 python 来执行 pip
+    - `pip install -r requirements.txt` #安装需求文档内的包依赖
+    - `pip freeze` #列出当前环境安装的包及其版本(锁定), 添加 `> requirements.txt`
+    - `pip cache dir` #显示pip cache 目录
+    - `python -m ensurepip --upgrade` #这是一个特殊指令(如果找不到pip)
+- [pipx](https://pipx.pypa.io/stable/)
+    - [pipx/pip等工具的官方对比解释](https://pipx.pypa.io/stable/comparisons/)
+    - 在隔离环境中安装和运行 Python 应用程序,每个程序各自有独立虚拟环境
+    - pipx依赖于 pip 和 venv
+    - pipx 取代了 pip 的部分功能；它允许你安装命令行应用程序，但不能安装你在代码中导入的库
+    - pipx和brew都可以安装应用程序(来源不同)
+
+---
+
+<div align="center">
+    <h2 id="astral">
+    📒 [Astral.sh](https://astral.sh/) (uv/ruff/ty)
+    </h2>
+</div>
 
 > Astral用Rust 编写的 uv, ruff, ty
 

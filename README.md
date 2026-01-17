@@ -19,8 +19,6 @@ My personal notes & development environment configuration
 - [About Game Development](#game-dev)
 - [Personal Configuration](#cfg)
 
----
-
 <h2 id="system">📒 About System</h2>
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
@@ -32,8 +30,6 @@ My personal notes & development environment configuration
 - [Runpod 笔记](about_system/about_runpod.md)
 - [DevTools 笔记](about_system/about_devtools.md)
 - [Fedora 笔记](about_system/about_fedora.md)
-
----
 
 <h2 id="llm">📒 About LLM & AIGC</h2>
 
@@ -62,8 +58,6 @@ My personal notes & development environment configuration
 
 - [LangChain 笔记](about_llm/about_langchain.md)
 - [LangFlow 笔记](about_llm/about_langflow.md)
-
----
 
 <h2 id="dev">📒 About Development</h2>
 
@@ -105,16 +99,12 @@ My personal notes & development environment configuration
 - [Markdown 笔记](about_development/about_md.md)
 - [关于许可证类型](about_development/about_license.md)
 
----
-
 <h2 id="cgi">📒 About CGI</h2>
 
 [**Blender**]
 
 - [Blender 技术笔记](about_cgi/about_blender.md)
 - [Blender 测试笔记](about_cgi/bl_tstNotes.md)
-
----
 
 <h2 id="game-dev">📒 About Game Development</h2>
 
@@ -129,8 +119,6 @@ My personal notes & development environment configuration
 
 - [RPG-Maker-Mz 笔记](about_gamedev/about_rpgmaker.md)
 - [其他游戏引擎](about_gamedev/OT_gameEngines.md)
-
----
 
 <h2 id="cfg">📒 Personal Configuration</h2>
 

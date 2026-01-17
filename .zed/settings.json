@@ -1,0 +1,12 @@
+{
+  "project_name": ">>>>>>>>>> 🟢 c6x-mynotes 🟢 <<<<<<<<<<",
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".venv",
+        ]
+      }
+    }
+  }
+}

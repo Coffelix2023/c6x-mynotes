@@ -1,17 +1,25 @@
-<h1 id="top">Python Basic 基础笔记</h1>
+# Python Basic
+
+**Python 基础笔记**
 
 [about_development/about_python/python_basic.md]
 
 [返回首页](../../README.md)
 
-## Content
+### Content
 
-- [扫盲区](#base)
-- [Astral.sh | uv,ruff,ty](#astral)
+- [Base Concept](#base-concept)
+- [Astral](#astral) (uv/ty/ruff)
+- [Python LSP](#python-lsp)
+- [Python Lint & Formatter](#python-lint-and-formatter)
+- [Python Management](#python-management)
+- [Code Blocks](#code-blocks)
 
 ---
 
-<h3 id="base">Base | 扫盲区</h3>
+## Base Concept
+
+**扫盲区**
 
 - [PyPA](https://www.pypa.io/en/latest/)
     - Python 打包权威机构 (PyPA) 是一个工作组，负责维护 Python 打包中使用的核心软件项目集
@@ -31,21 +39,16 @@
     - `pip cache dir` #显示pip cache 目录
     - `python -m ensurepip --upgrade` #这是一个特殊指令(如果找不到pip)
 - [pipx](https://pipx.pypa.io/stable/)
-    - [pipx/pip等工具的官方对比解释](https://pipx.pypa.io/stable/comparisons/)
+    - pipx/pip等工具的[官方对比解释](https://pipx.pypa.io/stable/comparisons/)
     - 在隔离环境中安装和运行 Python 应用程序,每个程序各自有独立虚拟环境
     - pipx依赖于 pip 和 venv
     - pipx 取代了 pip 的部分功能；它允许你安装命令行应用程序，但不能安装你在代码中导入的库
     - pipx和brew都可以安装应用程序(来源不同)
+    - 使用 uv 可以替代 pip 和 pipx
 
----
+## Astral
 
-<div align="center">
-    <h2 id="astral">
-    📒 [Astral.sh](https://astral.sh/) (uv/ruff/ty)
-    </h2>
-</div>
-
-> Astral用Rust 编写的 uv, ruff, ty
+**[Astral.sh](https://astral.sh/) 用 Rust 编写的 uv, ruff, ty**
 
 - 🔘 [uv](https://docs.astral.sh/uv/) ([查看仓库](https://github.com/astral-sh/uv))
 
@@ -60,19 +63,31 @@
 # PATH读取顺序: conda -> venv -> system
 # 根据官网步骤 enable shell autocompletion for uv cmd
     echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
-# 常用指令
+
+# uv 用法
     uv cache clean/prune  # 清理缓存
     uv python list  # 列出 python 版本安装信息
     uv python pin PYTHON_VERSION  #显示/锁定当前目录python版本
     uv python pin --global  #显示/锁定全局python版本, 之后每次创建的py版本不变
-    uv init     #创建 python 项目
-    uv add      #添加dependency, uv add --dev (添加开发依赖)
-    uv remove   #移除dependency
-    uv sync     #根据 pyproject.toml 同步到env(会自动创建venv)
-    uv run      #运行指令
-    uv tool run #等价于 uvx
-        # 使用uvx, 工具会被安装到临时的、隔离的环境中
+    uv init         # 创建 python 项目
+    uv add          # 添加dependency, uv add --dev (添加开发依赖)
+    uv remove       # 移除dependency
+    uv sync         # 根据 pyproject.toml 同步到env(会自动创建venv)
+    uv run sample.py        # 运行指令, 相当于 python foo.py
+    uv run bash sample.sh   # 运行bash
+
+# uv tool 用法
+    uv tool run # 无需安装即可使用调用工具
+    uvx         # 等价于 uv tool run
+                # 使用uvx, 工具会被安装到临时的、隔离的环境中
+    uv tool install     # 安装工具, 添加到 PATH 中隔离的虚拟环境,持久性
+    uv tool list        # 查看已安装包
 ```
+
+- 使用 uv 创建项目
+    - `uv init sample` 创建标准目录,包括.git
+        - `uv init --app | --lib` 创建应用或者库
+    - `uv init sample --bare` 创建极简项目, 只有一个pyproject.toml
 
 - 🔘 [ty](https://docs.astral.sh/ty/) ([查看仓库](https://github.com/astral-sh/ty))
 
@@ -95,7 +110,9 @@
 
 ---
 
-### 📒 Python LSP - 语言服务器
+## Python LSP
+
+**Python 语言服务器**
 
 - 🔘 [Pyright](https://microsoft.github.io/pyright/#/)
 
@@ -111,7 +128,9 @@
 
 ---
 
-### 📒 Python Lint & Formatter - 质量检查与格式化
+## Python Lint And Formatter
+
+**Python 质量检查与格式化**
 
 > 可以先尝试用ruff + ty (官方推荐)
 
@@ -151,7 +170,9 @@
 
 ---
 
-### 📒 Python 版本管理
+## Python Management
+
+**Python 解释器版本管理**
 
 - 🔘 [Pyenv](https://github.com/pyenv/pyenv)
 
@@ -169,7 +190,9 @@
 
 ---
 
-- 备份: 常用函数与代码块
+## Code Blocks
+
+**备份: 常用函数与代码块**
 
 ```python
 # >>> 这是在comfyui扩展开发过程积累的部分常用函数 <<<

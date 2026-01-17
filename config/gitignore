@@ -3,7 +3,6 @@
 # >>>>>>>> custom
 **/.mydocs
 **/.mysecret
-.detect_env.py
 
 # >>>>>>>> system
 .DS_Store
@@ -35,7 +34,6 @@
 .history/
 *.swp
 *.swo
-
 
 # >>>>>>>> env & secret
 **/.venv/
@@ -114,7 +112,6 @@ tmp/
 temp/
 *.log
 *.pid
-
 
 # >>>>>>>> Big files
 **/*.safetensors

@@ -12,16 +12,16 @@ My personal notes & development environment configuration
 
 ### Content
 
-- [About System](#📒-About-System)
-- [About LLM & AIGC](#📒-About-LLM--AIGC)
-- [About Development](#📒-About-Development)
-- [About CGI](#📒-About-CGI)
-- [About Game Development](#📒-About-Game-Development)
-- [Personal Configuration](#📒-Personal-Configuration)]
+- [About System](#system)
+- [About LLM & AIGC](#About-LLM--AIGC)
+- [About Development](#About-Development)
+- [About CGI](#About-CGI)
+- [About Game Development](#About-Game-Development)
+- [Personal Configuration](#cfg)
 
 ---
 
-### 📒 About System
+<h3 id="system">📒 About System</h3>
 
 - [Homebrew 笔记](about_system/about_homebrew.md)
 - [Terminal 笔记](about_system/about_terminal.md)
@@ -132,7 +132,7 @@ My personal notes & development environment configuration
 
 ---
 
-### 📒 Personal Configuration
+<h3 id="cfg">📒 Personal Configuration</h3>
 
 - [zshenv](config/zshenv)
 - [zprofile](config/zprofile)

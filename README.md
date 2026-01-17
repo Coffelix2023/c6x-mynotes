@@ -6,6 +6,10 @@
 
 </div>
 
+### What is this?
+
+My personal notes & development environment configuration
+
 ### 📒 About System
 
 - [Homebrew 笔记](about_system/about_homebrew.md)

@@ -22,7 +22,7 @@
         - `python -m ensurepip --upgrade` #这是一个特殊指令(如果找不到pip)
     - [pipx](https://pipx.pypa.io/stable/)
         - [pipx/pip等工具的官方对比解释](https://pipx.pypa.io/stable/comparisons/)
-        - 在隔离环境中安装和运行 Python 应用程序
+        - 在隔离环境中安装和运行 Python 应用程序,每个程序各自有独立虚拟环境
         - pipx依赖于 pip 和 venv
         - pipx 取代了 pip 的部分功能；它允许你安装命令行应用程序，但不能安装你在代码中导入的库
         - pipx和brew都可以安装应用程序(来源不同)

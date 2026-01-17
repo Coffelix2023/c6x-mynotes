@@ -4,7 +4,40 @@
 
 [返回索引](../README.md)
 
-### 📒 常用规则
+- **Bash**
+    - 系统自带 : `/bin/bash`
+    - 安装(不推荐) : `brew install bash`
+    - powershell: windows终端工具
+
+---
+
+- **Zsh** (MacOS)
+    - 系统自带 : `/bin/zsh`
+    - 安装(不推荐) : `brew install zsh`
+    - zsh_config:
+        - .zshenv : 最优读取, 存放全局变量定义
+        - .zprofile : 登录读取, 存放PATH/Conda 等
+        - .zshrc : 交互式, 存放别名
+    - [zinit](https://github.com/zdharma-continuum/zinit):
+        - zsh的美化和自动补全工具
+        - 安装见仓库链接
+        - 常用zinit命令
+            - `zinit compiled` : 列出已编译的插件
+            - `zinit delete --clean` : 清除未使用的插件包
+            - `zinit update/self-update` : 更新所有插件/或/升级自己
+    - [compinit](https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Initialization)
+        - zsh的自动补全,在.zshrc中的顺序如下:
+            1. fpath(自动补全插件的路径)
+            2. 初始化 compinit
+                - `autoload -Uz compinit`
+                    - `-U` : 加载时不进行 alias 展开（安全）
+                    - `-Uz` : 按照 Zsh 风格标记自动加载
+                - `compinit`
+            3. 其他自动补全插件
+
+---
+
+- **Shell 编写惯例**
 
 ```bash
 # Shell 变量赋值语法规则
@@ -28,57 +61,101 @@
 
 ---
 
-### 📒 MacOS-SHELL
+- 常用函数/方法/语法
 
 ```bash
-# Bash
-  系统自带 : /bin/bash
-  安装(不推荐) : `brew install bash`
-  powershell: windows终端工具
-# Zsh
-  系统自带 : /bin/zsh
-  安装(不推荐) : `brew install zsh`
-  zsh_config:
-    - .zshenv : 最优读取, 存放全局变量定义
-    - .zprofile : 登录读取, 存放PATH/Conda 等
-    - .zshrc : 交互式, 存放别名
+- [ -r "cmd" ]
+    # Shell中文件测试语法( test ), 返回 Boolean 值( 0 = true)
+        -e : 文件或目录是否存在
+        -s : 文件存在且 size > 0
+        -r : 是否可读
+        -w : 是否可写
+        -x : 是否可执行
+        -f : 是否为文件(非目录或设备)
+        -d : 是否为目录
+        -L : 是否为符号链接
+    # 注意: []中文本前后有空格,容易报错的误区
+    # 示例:
+        [[ -r "file" ]] && source "file" || echo "no exist file"  #不推荐
+        # 等价于(更推荐完整写法)
+        if [[ -r "file" && -s "file" ]]; then
+            source "file"
+        else
+            echo "no exist file"
+        fi
 
-# mac中查看自定义的快捷命令用 `which -a <alias>`即可, 但fedora中需要使用:
-  type -f <alias> : 显示完整指令,mac通用
-  type -a <alias> : 显示该指令的位置
+- # 函数工具检测
+    if command -v [工具] >/dev/null 2>&1; then
+        执行函数工具
+    fi
 ```
 
-### 📒 常用命令
+---
+
+### 📒 常用 Shell 命令
 
 ```bash
 - curl
-    # macOS默认安装 : /usr/bin/curl
+    # 内建指令, Get a file from an HTTP, HTTPS or FTP server
+
+- type
+    # -f <cmd> 显示完整指令,mac通用
+    # -a <cmd> 显示该指令的位置,类似 command -V
+
 - command
-    # zsh内建指令, 查看某个指令的类型( command -V CMD )
+    # zsh内建指令
+    # -V <cmd> 查看某个指令的类型( command -V CMD )
+
 - type
     # 类似command
+
+- $fpath
+    # zsh 专用的目录列表（数组），用于查找 shell 函数文件
+    # 如果放入$PATH, 则无效, 因为$PATH 不执行函数
+    # 将fpath 和 PATH 分开可以提高启动速度
+
+- $PATH
+    # 可执行命令可存放的位置
+    # 环境变量,冒号分隔
+
+- autoload
+    # 内建指令,延迟加载函数,第一次调用才读取文件
+    # 提高启动速度（函数不必每次 shell 启动时都加载）
+
 - man
-  man <commander> 查看某个包或程序的manual, Q退出
-  # 可以用 glow 命令(brew install glow)更美观的预览
+    # man <commander> 查看某个包或程序的manual, Q退出
+    # 可以用 glow 命令(brew install glow)更美观的预览
+
 - unzip
-  macOS默认安装 : /usr/bin/unzip
+    # macOS默认安装 : /usr/bin/unzip
+
 - winget
-  windows获取工具
+    # windows获取工具
+
 - wget
-  默认安装: /opt/homebrew/bin/wget
+    # installation: /opt/homebrew/bin/wget.
+    # download file from an HTTP, HTTPS or FTP server
+
 - eval
-  eval "$(…)" // 动态执行生成的配置文本
+    # eval "$(…)"
+    # 动态执行生成的配置文本
+
 - apt
-  Linux获取工具
+    # Linux获取工具
+
 - tree
-  brew install tree // 树状目录结构
-  /opt/homebrew/bin/tree
+    # installation: brew install tree
+    # 树状目录结构
+
 - dua
-  dua -cha -d 1 # 查看当前目录的体积大小 -h为人类阅读,-d 是1级目录
+    # dua -cha -d 1 # 查看当前目录的体积大小 -h为人类阅读,-d 是1级目录
+
 - make
-  默认安装 : /usr/bin/make
-- ✅解决安装包损坏的方法
-  xattr -d 'com.apple.quarantine' <yourApp>
+    # 默认安装 : /usr/bin/make
+
+- 解决安装包损坏的方法
+    xattr -d 'com.apple.quarantine' <yourApp>
+
 - sw_vers
   显示mac系统版本信息
 - 查找文件

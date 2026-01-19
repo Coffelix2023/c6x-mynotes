@@ -1,6 +1,6 @@
 # Python Basic
 
-**Python 基础笔记**
+_Python 基础笔记_
 
 [about_development/about_python/python_basic.md]
 
@@ -84,7 +84,7 @@
     uv tool list        # 查看已安装包
 ```
 
-- 使用 uv 创建项目
+- 🔘 使用 uv 创建项目
     - `uv init sample` 创建标准目录,包括.git
         - `uv init --app | --lib` 创建应用或者库
     - `uv init sample --bare` 创建极简项目, 只有一个pyproject.toml
@@ -105,7 +105,8 @@
 - 🔘 [ruff](https://docs.astral.sh/ruff/tutorial/) ([查看仓库](https://github.com/astral-sh/ruff))
 
 ```bash
-
+# Rust 编写的、速度极快的 Python 代码检查和格式化工具
+# 通过 pyproject.toml, ruff.toml, .ruff.toml配置
 ```
 
 ---

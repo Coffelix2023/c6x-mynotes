@@ -5,3 +5,8 @@ description = "My Personal Notes Library"
 readme = "README.md"
 requires-python = ">=3.12.10"
 dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "play_py/pymu_pdf",
+]

@@ -1,4 +1,8 @@
-# homebrew 笔记
+# homebrew
+
+[website](https://brew.sh/)
+
+[about_system/about_homebrew.md]
 
 [返回索引](../README.md)
 
@@ -26,6 +30,16 @@
     brew uses --installed --recursive ...  #查看安装包的依赖关系
         #如何有包依赖过期或者失效可以卸载不需要的工具或重新安装更新依赖关系
         brew reinstall ...
+    ```
+
+- 自动补全(zsh shell) :
+    ```bash
+    # >>> homebrew 自动补全(在cominit之前)
+    if command -v brew >/dev/null 2>&1; then
+        eval "$(brew shellenv)"
+    else
+        echo "[zshrc警告] 找不到 brew/homebrew"
+    fi
     ```
 
 ---

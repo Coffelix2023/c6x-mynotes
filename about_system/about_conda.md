@@ -1,4 +1,4 @@
-## Conda 笔记
+# Conda Notes
 
 [_about_system/about_conda.md_]
 
@@ -44,14 +44,20 @@
 
 ---
 
-### Miniconda的使用([查看官方文档](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html))
+## Miniconda 用法
+
+- [官方文档](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+
+- 自动补全(Tab)
+    - [conda-zsh-completion](https://github.com/conda-incubator/conda-zsh-completion)
 
 - 环境管理
-
-    ```bash
-    conda create -n ENV_NAME python=3.12
-    conda create -n ENV_NAME --clone DEST_ENV_NAME
-    conda env list
-    conda activate ENV_NAME
-    conda deactivate
-    ```
+    - `conda create -n <envname> python=3.12`
+    - `conda create -n <envname> --clone <dest-envname>`
+    - `conda env list`
+    - `conda activate <envname>`
+    - `conda deactivate`
+      
+- 安装包依赖
+    - `conda search <pkg>`  查询可安装包
+    - `conda install <pkg> —name <env>`  安装到指定环境

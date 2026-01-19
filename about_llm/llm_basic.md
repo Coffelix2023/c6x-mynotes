@@ -1,4 +1,8 @@
-## LLM Basic 基础笔记
+# LLM Basic
+
+**LLM 基础笔记**
+
+[about_llm/llm_basic.md]
 
 [返回索引](../README.md)
 

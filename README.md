@@ -2,7 +2,7 @@
 
 # c6x-mynotes
 
-**Personal notes Library**
+_Personal notes Library_
 
 </div>
 
@@ -21,111 +21,122 @@ My personal notes & development environment configuration
 
 <h2 id="system">📒 About System</h2>
 
-- [Homebrew 笔记](about_system/about_homebrew.md)
-- [Terminal 笔记](about_system/about_terminal.md)
-- [Env PATH 配置笔记](about_system/about_env.md)
-- [Git 笔记](about_system/about_git.md)
-- [Conda 笔记](about_system/about_conda.md)
-- [Podman 笔记](about_system/about_podman.md)
-- [Runpod 笔记](about_system/about_runpod.md)
-- [DevTools 笔记](about_system/about_devtools.md)
-- [Fedora 笔记](about_system/about_fedora.md)
+- [Homebrew Notes](about_system/about_homebrew.md)
+- [Terminal Notes](about_system/about_terminal.md)
+- [Env PATH-config Notes](about_system/about_env.md)
+- [Git Notes](about_system/about_git.md)
+- [Conda Notes](about_system/about_conda.md)
+- [Podman Notes](about_system/about_podman.md)
+- [Runpod Notes](about_system/about_runpod.md)
+- [DevTools Notes](about_system/about_devtools.md)
+- [Fedora Notes](about_system/about_fedora.md)
 
 <h2 id="llm">📒 About LLM & AIGC</h2>
 
-[**ComfyUI**]
+[ComfyUI]
 
 - [ComfyUI Index](about_llm/comfyui/comfyui_index.md)
-- [ComfyUI 笔记](about_llm/comfyui/about_comfyui.md)
+- [ComfyUI Notes](about_llm/comfyui/about_comfyui.md)
 
-[**LLM**]
+[LLM]
 
-- [LLM 基础](about_llm/llm_basic.md)
-- [System Prompts 系统提示词示例](about_llm/about_system_prompts.md)
-- [MCP Servers 笔记](about_llm/about_mcp.md)
-- [Midjourney 笔记](about_llm/about_midjourney.md)
+- [LLM Basic](about_llm/llm_basic.md)
+- [MCP Servers Notes](about_llm/about_mcp.md)
+- [Midjourney Notes](about_llm/about_midjourney.md)
+- [Faceswap Notes](about_llm/about_faceswap.md)
 
-[**Agent**]
+[Agent]
 
-- [常用 Agent 笔记](about_llm/about_agent.md)
-- [Ollama 笔记](about_llm/about_ollama.md)
+- [About Agent](about_llm/about_agent.md)
+- [Github Copilot](about_llm/github_copilot.md)
+- [Agent Rules](about_llm/agent_rules.md)
+- [Ollama Notes](about_llm/about_ollama.md)
 
-[**技术笔记**]
+[Building]
 
-- [Faceswap 笔记](about_llm/about_faceswap.md)
-
-[**流程构建**]
-
-- [LangChain 笔记](about_llm/about_langchain.md)
-- [LangFlow 笔记](about_llm/about_langflow.md)
+- [LangChain Notes](about_llm/about_langchain.md)
+- [LangFlow Notes](about_llm/about_langflow.md)
 
 <h2 id="dev">📒 About Development</h2>
 
-[**Python**]
+[Python]
 
-- [基础概念](about_development/about_python/python_basic.md)
-- [python 框架笔记](about_development/about_python/python_framework.md)
+- [Python Basic](about_development/about_python/python_basic.md)
+- [Python Framework Notes](about_development/about_python/python_framework.md)
 
-[**JS/TS**]
+[JS/TS]
 
-- [基础概念](about_development/about_js/js_basic.md)
-- [JS Framework 框架笔记](about_development/about_js/js_framework.md)
-- [React 笔记](about_development/about_js/about_react.md)
-- [Vue 笔记](about_development/about_js/about_vue.md)
-- [Vite 笔记](about_development/about_js/about_vite.md)
-- [Node.js 笔记](about_development/about_js/about_nodejs.md)
-- [Bun 笔记](about_development/about_js/about_bun.md)
+- [JavaScript Basic](about_development/about_js/js_basic.md)
+- [Node.js Notes](about_development/about_js/about_nodejs.md)
+- [JS Framework Notes](about_development/about_js/js_framework.md)
+- [React Notes](about_development/about_js/about_react.md)
+- [Vue Notes](about_development/about_js/about_vue.md)
+- [Vite Notes](about_development/about_js/about_vite.md)
+- [Bun Notes](about_development/about_js/about_bun.md)
 
-[**Program Language**]
+[Program Language]
 
-- [Rust 笔记](about_development/about_languages/about_rust.md)
-- [Ruby 笔记](about_development/about_languages/about_ruby.md)
+- [Rust Basic](about_development/about_languages/about_rust.md)
+- [Ruby Basic](about_development/about_languages/about_ruby.md)
 
-[**Build Tool**]
+[Build Tool]
 
-- [Tauri 笔记](about_development/about_tauri.md)
-- [Svelte 笔记](about_development/about_svelte.md)
+- [Tauri Notes](about_development/about_tauri.md)
+- [Svelte Notes](about_development/about_svelte.md)
 
-[**Database**]
+[Database]
 
-- [Database 基础笔记](about_development/about_database/databasic.md)
-- [Nginx 笔记](about_development/about_database/about_nginx.md)
+- [Database Notes](about_development/about_database/databasic.md)
+- [Nginx Notes](about_development/about_database/about_nginx.md)
 
-[**OT**]
+[OT]
 
-- [基础概念](about_development/basic.md)
-- [IDE 笔记](about_development/about_ide.md)
-- [Web 笔记](about_development/about_web.md)
-- [Markdown 笔记](about_development/about_md.md)
-- [关于许可证类型](about_development/about_license.md)
+- [Development Basic](about_development/basic.md)
+- [IDE Notes](about_development/about_ide.md)
+- [Web Notes](about_development/about_web.md)
+- [Markdown Notes](about_development/about_md.md)
+- [About License](about_development/about_license.md)
 
 <h2 id="cgi">📒 About CGI</h2>
 
-[**Blender**]
+[Blender]
 
-- [Blender 技术笔记](about_cgi/about_blender.md)
-- [Blender 测试笔记](about_cgi/bl_tstNotes.md)
+- [Blender Notes](about_cgi/about_blender.md)
+- [Blender Testing Notes](about_cgi/bl_tstNotes.md)
 
 <h2 id="game-dev">📒 About Game Development</h2>
 
-[**Godot**]
+[Godot]
 
-- [Godot 笔记](about_gamedev/godot/about_godot.md)
-- [StateMachine 笔记](about_gamedev/godot/gd_state_machine.md)
-- [Minigame 笔记](about_gamedev/godot/gd_minigame.md)
-- [示例笔记](about_gamedev/godot/gd_samples.md)
+- [Godot Notes](about_gamedev/godot/about_godot.md)
+- [Godot Samples](about_gamedev/godot/gd_samples.md)
+- [StateMachine Notes](about_gamedev/godot/gd_state_machine.md)
+- [Minigame Notes](about_gamedev/godot/gd_minigame.md)
 
-[**OT Engines**]
+[OT Engines]
 
-- [RPG-Maker-Mz 笔记](about_gamedev/about_rpgmaker.md)
-- [其他游戏引擎](about_gamedev/OT_gameEngines.md)
+- [RPG-Maker-Mz Notes](about_gamedev/about_rpgmaker.md)
+- [OT Game Engine](about_gamedev/OT_gameEngines.md)
 
-## Personal Configuration
+## [Personal Configuration](config101)
 
-- [zshenv](config/zshenv)
-- [zprofile](config/zprofile)
-- [zshrc](config/zshrc)
-- [comfy.zsh](config/comfy.zsh)
+[zsh]
+
+- [zshenv](config101/zsh/zshenv)
+- [zprofile](config101/zsh/zprofile)
+- [zshrc](config101/zsh/zshrc)
+- [comfy.zsh](config101/zsh/comfy.zsh)
+
+[git]
+
+- [gitignore](config101/git/gitignore)
+
+[vscode & agent]
+
+- [gh_copilot_agent](config101/gh_copilot_agent)
+- [gh_copilot_instructions](config101/gh_copilot_instructions)
+- [gh_copilot_prompt](config101/gh_copilot_prompt)
+- [gh_copilot_toolsets](config101/gh_copilot_toolsets)
 
 ---
 

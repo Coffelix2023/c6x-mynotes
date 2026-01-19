@@ -1,39 +1,49 @@
-## Terminal 终端笔记
+## Terminal Notes
+
+**终端笔记**
 
 [_about_system/about_terminal.md_]
 
 [返回索引](../README.md)
 
-- **Bash**
+- Bash
     - 系统自带 : `/bin/bash`
     - 安装(不推荐) : `brew install bash`
     - powershell: windows终端工具
 
 ---
 
-- **Zsh** (MacOS)
+- [zsh](https://www.zsh.org/)
     - 系统自带 : `/bin/zsh`
     - 安装(不推荐) : `brew install zsh`
     - zsh_config:
         - .zshenv : 最优读取, 存放全局变量定义
         - .zprofile : 登录读取, 存放PATH/Conda 等
         - .zshrc : 交互式, 存放别名
-    - [zinit](https://github.com/zdharma-continuum/zinit):
-        - zsh的美化和自动补全工具
-        - 安装见仓库链接
-        - 常用zinit命令
-            - `zinit compiled` : 列出已编译的插件
-            - `zinit delete --clean` : 清除未使用的插件包
-            - `zinit update/self-update` : 更新所有插件/或/升级自己
-    - [compinit](https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Initialization)
-        - zsh的自动补全,在.zshrc中的顺序如下:
-            1. fpath(自动补全插件的路径)
-            2. 初始化 compinit
-                - `autoload -Uz compinit`
-                    - `-U` : 加载时不进行 alias 展开（安全）
-                    - `-Uz` : 按照 Zsh 风格标记自动加载
-                - `compinit`
-            3. 其他自动补全插件
+
+- [zinit](https://github.com/zdharma-continuum/zinit):
+    - zsh的美化和自动补全工具
+    - 安装见仓库链接
+    - 常用zinit命令
+        - `zinit compiled` : 列出已编译的插件
+        - `zinit delete --clean` : 清除未使用的插件包
+        - `zinit update/self-update` : 更新所有插件/或/升级自己
+
+- [compinit](https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Initialization)
+    - zsh的自动补全,在.zshrc中的顺序如下:
+        - fpath(自动补全插件的路径)
+        - 初始化 compinit
+            - `autoload -Uz compinit`
+                - `-U` : 加载时不进行 alias 展开（安全）
+                - `-Uz` : 按照 Zsh 风格标记自动加载
+            - `compinit`
+        - 其他自动补全插件
+
+- zint常用插件(直接添加到.zshrc中)
+    - `zinit light sindresorhus/pure`
+    - `zinit light zsh-users/zsh-syntax-highlighting`
+    - `zinit light hlissner/zsh-autopair`
+    - `zinit light Aloxaf/fzf-tab`
 
 ---
 
@@ -94,65 +104,70 @@
 
 ### 📒 常用 Shell 命令
 
-```bash
-- curl
-    # 内建指令, Get a file from an HTTP, HTTPS or FTP server
+- `curl`
+    - 内建指令, Get a file from an HTTP, HTTPS or FTP server
 
-- type
-    # -f <cmd> 显示完整指令,mac通用
-    # -a <cmd> 显示该指令的位置,类似 command -V
+- `type`
+    - -f <cmd> 显示完整指令,mac通用
+    - -a <cmd> 显示该指令的位置,类似 command -V
 
 - command
-    # zsh内建指令
-    # -V <cmd> 查看某个指令的类型( command -V CMD )
+    - zsh内建指令
+    - -V <cmd> 查看某个指令的类型( command -V CMD )
 
 - type
-    # 类似command
+    - 类似command
+
+- exec $SHELL
+    - 当前终端重启,
+      -l : 完整重启(包括登录shell)
 
 - $fpath
-    # zsh 专用的目录列表（数组），用于查找 shell 函数文件
-    # 如果放入$PATH, 则无效, 因为$PATH 不执行函数
-    # 将fpath 和 PATH 分开可以提高启动速度
+- zsh 专用的目录列表（数组），用于查找 shell 函数文件
+- 如果放入$PATH, 则无效, 因为$PATH 不执行函数
+    - 将fpath 和 PATH 分开可以提高启动速度
 
 - $PATH
-    # 可执行命令可存放的位置
-    # 环境变量,冒号分隔
+    - 可执行命令可存放的位置
+    - 环境变量,冒号分隔
 
+- printenv
 - autoload
-    # 内建指令,延迟加载函数,第一次调用才读取文件
-    # 提高启动速度（函数不必每次 shell 启动时都加载）
+    - 内建指令,延迟加载函数,第一次调用才读取文件
+    - 提高启动速度（函数不必每次 shell 启动时都加载）
 
 - man
-    # man <commander> 查看某个包或程序的manual, Q退出
-    # 可以用 glow 命令(brew install glow)更美观的预览
+    - man <commander> 查看某个包或程序的manual, Q退出
+    - 可以用 glow 命令(brew install glow)更美观的预览
 
 - unzip
-    # macOS默认安装 : /usr/bin/unzip
+    - macOS默认安装 : /usr/bin/unzip
 
 - winget
-    # windows获取工具
+    - windows获取工具
 
 - wget
-    # installation: /opt/homebrew/bin/wget.
-    # download file from an HTTP, HTTPS or FTP server
+    - installation: /opt/homebrew/bin/wget.
+    - download file from an HTTP, HTTPS or FTP server
 
 - eval
-    # eval "$(…)"
-    # 动态执行生成的配置文本
+    - eval "$(…)"
+    - 动态执行生成的配置文本
 
 - apt
-    # Linux获取工具
+    - Linux获取工具
 
 - tree
-    # installation: brew install tree
-    # 树状目录结构
+    - installation: brew install tree
+    - 树状目录结构
 
 - dua
-    # dua -cha -d 1 # 查看当前目录的体积大小 -h为人类阅读,-d 是1级目录
+    - dua -cha -d 1 - 查看当前目录的体积大小 -h为人类阅读,-d 是1级目录
 
 - make
-    # 默认安装 : /usr/bin/make
+    - 默认安装 : /usr/bin/make
 
+```
 - 解决安装包损坏的方法
     xattr -d 'com.apple.quarantine' <yourApp>
 
@@ -185,6 +200,7 @@ scutil --nwi : 获取当前Network information
 - huggingface_hub
     - HF的仓库,上传和下载
     - 保存目录 : /Volumes/FELIX-APFS/LLM/huggingface_hub
+
 - hf (huggingface-cli已弃用)
     - 安装: uv pip install -U huggingface_hub | uv pip install hf_transfer  #加速下载
         hf version 验证
@@ -242,6 +258,7 @@ scutil --nwi : 获取当前Network information
             -v : 显示详细信息
             --exclude : 排除特定文件(--exclude="*.log")
             --exclude-from=<file.txt>
+
 - 局域网传输举例:
     rsync -ah --progress felix@192.168.0.121:/home/felix/... ~/Downloads
 

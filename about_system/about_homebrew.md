@@ -123,6 +123,16 @@
     ctl + g:帮助 | +q 退出 | +s 保存 - opt + g: 快捷 - ctl + e: 设置菜单 >set: set colorscheme 主题设置(常用主题: gruvbox/simple/geany)
     ```
 
+- gitleaks
+    ```bash
+    # 快速扫描目录文档可能泄露的密钥
+    # 用法:
+    gitleaks git -v  #查询仓库
+    gitleaks dir -v  #查询当前目录
+    gitleaks git -v --log-opts="--all main"  #扫描git commit history
+
+    ```
+
 ---
 
 ### 📒 常用 Cask

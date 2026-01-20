@@ -4,6 +4,9 @@
     "working_directory": "current_project_directory",
     "detect_venv": {
       "on": {
+        "activate_script": "default",
+        "conda_manager": null,
+        "venv_name": ".venv",
         "directories": [
           ".venv",
         ]

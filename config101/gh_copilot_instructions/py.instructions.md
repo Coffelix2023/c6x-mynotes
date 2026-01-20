@@ -1,7 +1,7 @@
 ---
 applyTo: "**/*.py"
-name: Python Coding Standards
-description: Coding standards and best practices for Python projects.
+name: Python Project
+description: Python 项目代码的最佳实践规则
 ---
 
 # Project coding standards for Python

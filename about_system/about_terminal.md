@@ -13,7 +13,7 @@
 
 ---
 
-- [zsh](https://www.zsh.org/)
+- [zsh](https://www.zsh.org/) ([查看仓库](https://github.com/zsh-users/zsh/tree/master))
     - 系统自带 : `/bin/zsh`
     - 安装(不推荐) : `brew install zsh`
     - zsh_config:

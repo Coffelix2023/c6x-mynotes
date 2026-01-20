@@ -57,7 +57,7 @@
     - `conda env list`
     - `conda activate <envname>`
     - `conda deactivate`
-      
+
 - 安装包依赖
     - `conda search <pkg>`  查询可安装包
     - `conda install <pkg> —name <env>`  安装到指定环境

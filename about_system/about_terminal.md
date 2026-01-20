@@ -7,7 +7,7 @@
 [返回索引](../README.md)
 
 - Bash
-    - 系统自带 : `/bin/bash`
+    - 系统默认自带 : `/bin/bash`
     - 安装(不推荐) : `brew install bash`
     - powershell: windows终端工具
 

@@ -118,7 +118,7 @@ My personal notes & development environment configuration
 - [RPG-Maker-Mz Notes](about_gamedev/about_rpgmaker.md)
 - [OT Game Engine](about_gamedev/OT_gameEngines.md)
 
-## [Personal Configuration](config101)
+## [Personal Configuration]
 
 [zsh]
 

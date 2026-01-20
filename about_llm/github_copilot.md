@@ -17,7 +17,7 @@
         - Header-yaml:
             - `name:`
             - `description:`
-            - `applyTo: "**/*.py"`
+            - `applyTo: "**/*.py"` - `"**"`为应用到所有文件
 
     - ✅ Agents (代理助手)
         - 自动加入上下文
@@ -29,6 +29,6 @@
         - Header-yaml:
             - `name:`
             - `description:`
-            - `tools: ["web","search"]` - 工具应用
-                - [tools 参数](https://code.visualstudio.com/docs/copilot/chat/chat-tools):
+            - `tools: ["web","search"]` - 启用的工具数组
+                - [查看 tools 参数](https://code.visualstudio.com/docs/copilot/chat/chat-tools):
             - `model: Claude Sonnet 4.5` - 补全提示的模型

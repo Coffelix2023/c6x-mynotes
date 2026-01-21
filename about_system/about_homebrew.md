@@ -124,6 +124,7 @@
     ```
 
 - gitleaks
+
     ```bash
     # 快速扫描目录文档可能泄露的密钥
     # 用法:
@@ -131,6 +132,13 @@
     gitleaks dir -v  #查询当前目录
     gitleaks git -v --log-opts="--all main"  #扫描git commit history
 
+    ```
+
+- starship
+    ```bash
+    # 轻量、迅速、客制化的高颜值终端
+    # 用法:
+        .zshrc 加入: `eval "$(starship init zsh)"`
     ```
 
 ---

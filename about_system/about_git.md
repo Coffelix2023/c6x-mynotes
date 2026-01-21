@@ -6,7 +6,7 @@
 
 ---
 
-- 创建新仓库(repository)
+- 🔘 git 新仓库(repository)
 
     ```bash
     echo "# c6x-mynotes" >> README.md
@@ -18,7 +18,7 @@
     git push -u origin main
     ```
 
-- 推送仓库(push repository)
+- 🔘 git 推送仓库(push repository)
 
     ```bash
     git remote add origin git@github.com:<git>
@@ -26,9 +26,15 @@
     git push -u origin main
     ```
 
-- gitleaks
+- 🔘 gitleaks
+    - 密钥安全扫描
+    - installation
+        - `brew install gitleaks`
+    - 用法:
+        - `gitleaks git .`
+        - `gitleaks dir .`
 
-- pre-commit
+- 🔘 pre-commit
     - 用于管理和执行 Git 钩子（Git hooks）的框架
     - 将这些钩子集中配置在一个统一的 .pre-commit-config.yaml 文件中，便于团队共享和维护
     - 安装: `pip install pre-commit`
@@ -38,6 +44,6 @@
         - 如果某个钩子失败（退出码非 0），提交会被阻止
         - 可选择性按需运行特定钩子或全部钩子
 
-- 常用命令:
+- 🔘 常用命令:
     - 清理已忽略(.gitignore)的文件(保留本地文件)
       `git clean -X -f`

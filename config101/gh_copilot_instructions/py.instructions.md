@@ -4,10 +4,20 @@ name: Python Project
 description: Python 项目代码的最佳实践规则
 ---
 
-# Project coding standards for Python
+# Python项目编码最佳实践
 
-- Follow the PEP 8 style guide for Python.
-- Always prioritize readability and clarity.
-- Write clear and concise comments for each function.
-- Ensure functions have descriptive names and include type hints.
-- Maintain proper indentation (use 4 spaces for each level of indentation).
+## 总体原则
+
+- 始终优先考虑代码的可读性和可维护性, 保持代码简洁，避免不必要的复杂性
+
+## python 代码风格 (PEP 8)
+
+- 使用4个空格缩进，不要使用制表符
+- 每行最大长度限制为88个字符（遵循black默认值）
+- 使用小写字母和下划线的蛇形命名法命名变量、函数和方法
+- 使用首字母大写的驼峰命名法命名类
+- 使用全大写字母和下划线的蛇形命名法命名常量
+- 在运算符周围和逗号后添加空格
+- 在类定义和顶级函数之间使用两个空行
+- 在方法定义之间使用一个空行
+- 使用尾随逗号以提高可读性和版本控制友好性

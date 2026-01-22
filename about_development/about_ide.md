@@ -1,6 +1,12 @@
-## IDE 代码编辑器笔记
+# IDE Notes
+
+**代码编辑器笔记**
+
+[about_development/about_ide.md]
 
 [返回索引](../README.md)
+
+---
 
 - 🔘 [vscode](https://code.visualstudio.com/)
 

@@ -1,0 +1,23 @@
+[tools]
+black = "latest"
+node = "24.13.0"
+pnpm = "latest"
+python = "3.12.10"
+ruff = "latest"
+ty = "latest"
+uv = "latest"
+
+[settings]
+python.uv_venv_auto = true
+
+[env]
+# _.python.venv = { path = ".venv" }
+
+# ==============================
+# >>> tasks
+# =============================
+[tasks.git-add]
+run = '''
+echo "Adding all changes to git..."
+git add .
+'''

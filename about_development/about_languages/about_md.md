@@ -1,8 +1,8 @@
 <h1 id="markdown-top">Markdown 笔记</h1>
 
-[about_development/about_md.md]
+[about_development/about_languages/about_md.md]
 
-[返回索引](../README.md)
+[返回索引](../../README.md)
 
 ---
 

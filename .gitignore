@@ -3,8 +3,6 @@
 # >>>>>>>> custom
 **/.mydocs
 **/.mysecret
-.detect_env.py
-.active_env.py
 
 # >>>>>>>> system
 .DS_Store

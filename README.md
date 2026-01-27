@@ -25,12 +25,8 @@ My personal notes & development environment configuration
 
 - [Homebrew Notes](about_system/about_homebrew.md)
 - [Terminal Notes](about_system/about_terminal.md)
-- [Env PATH-config Notes](about_system/about_env.md)
-- [Git Notes](about_system/about_git.md)
-- [Conda Notes](about_system/about_conda.md)
 - [Podman Notes](about_system/about_podman.md)
 - [Runpod Notes](about_system/about_runpod.md)
-- [DevTools Notes](about_system/about_devtools.md)
 - [Fedora Notes](about_system/about_fedora.md)
 
 <h2 id="llm">📒 About LLM & AIGC</h2>
@@ -61,6 +57,13 @@ My personal notes & development environment configuration
 
 <h2 id="dev">📒 About Development</h2>
 
+[Environment & Management]
+
+- [Mise Notes](about_development/about_management/about_mise.md)
+- [Git Notes](about_development/about_management/about_git.md)
+- [uv Notes](about_development/about_management/about_uv.md)
+- [Conda Notes](about_development/about_management/about_conda.md)
+
 [Python]
 
 - [Python Basic](about_development/about_python/python_basic.md)
@@ -80,11 +83,13 @@ My personal notes & development environment configuration
 
 - [Rust Basic](about_development/about_languages/about_rust.md)
 - [Ruby Basic](about_development/about_languages/about_ruby.md)
+- [Markdown Notes](about_development/about_languages/about_md.md)
 
 [Build Tool]
 
 - [Tauri Notes](about_development/about_tauri.md)
 - [Svelte Notes](about_development/about_svelte.md)
+- [DevTools Notes](about_development/about_devtools.md)
 
 [Database]
 
@@ -96,7 +101,6 @@ My personal notes & development environment configuration
 - [Development Basic](about_development/basic.md)
 - [IDE Notes](about_development/about_ide.md)
 - [Web Notes](about_development/about_web.md)
-- [Markdown Notes](about_development/about_md.md)
 - [About License](about_development/about_license.md)
 
 <h2 id="cgi">📒 About CGI</h2>

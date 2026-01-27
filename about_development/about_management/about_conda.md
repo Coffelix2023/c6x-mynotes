@@ -2,7 +2,7 @@
 
 [_about_system/about_conda.md_]
 
-[返回索引](../README.md)
+[返回索引](../../README.md)
 
 ---
 
@@ -59,5 +59,5 @@
     - `conda deactivate`
 
 - 安装包依赖
-    - `conda search <pkg>`  查询可安装包
-    - `conda install <pkg> —name <env>`  安装到指定环境
+    - `conda search <pkg>` 查询可安装包
+    - `conda install <pkg> —name <env>` 安装到指定环境

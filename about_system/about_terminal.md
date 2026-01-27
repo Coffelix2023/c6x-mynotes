@@ -6,12 +6,16 @@
 
 [返回索引](../README.md)
 
+## Bash
+
 - Bash
     - 系统默认自带 : `/bin/bash`
     - 安装(不推荐) : `brew install bash`
     - powershell: windows终端工具
 
 ---
+
+## ZSH
 
 - [zsh](https://www.zsh.org/) ([查看仓库](https://github.com/zsh-users/zsh/tree/master))
     - 系统自带 : `/bin/zsh`
@@ -45,9 +49,79 @@
     - `zinit light hlissner/zsh-autopair`
     - `zinit light Aloxaf/fzf-tab`
 
----
+- zsh的交互防御
+    - 常用方法,在zshrc中加入:
+        - `[[ $- != *i* ]] || return` 如果第1 个条件满足则进入第 2 条件
+        - `[[ -o interactive ]] || return`
 
-- **Shell 编写惯例**
+- zsh脚本常用表达式
+
+    ```bash
+    # 基本语法
+    [[ condition ]] && echo "条件为真" || echo "条件为假"
+        #[[]]必须前后空格, 变量最好添加引号,
+        -d : 是否为目录
+        -e : 文件或目录是否存在
+        -s : 文件存在且 size > 0(内容非空)
+        -r : 是否可读
+        -w : 是否可写
+        -x : 是否可执行
+        -n : 字符串非空
+        -f : 是否为文件(非目录或设备)
+        -L : 是否为符号链接
+    # 示例: 文件或目录验证
+        [[ -d sample_dir ]] && echo "目录存在"
+        [[ -d sample_dir ]] || echo "目录不存在" #如果 sample_dir 存在,echo 不会执行
+        [[ ! -e sample_file ]] && echo "文件不存在"
+        [[ -d sample_dir && -e  ]] && echo "目录存在"
+    # 命令验证
+        command -v cmd >/dev/null 2>&1 && echo "cmd 命令可用"  #简化写法
+        if command -v fd >/dev/null 2>&1; then
+            echo "fd 命令可用"
+            return 1
+        fi
+    # 参数验证
+        if [[ $# -eq 0 ]]; then
+            echo "用法: $0 <filename>"
+            return 1
+        fi
+    # 数字比较
+        (( count > 100 )) && echo "count 大于 100"
+
+    # 逻辑运算符
+        command1 && command2  # command1 成功则执行 command2
+        command1 || command2  # command1 失败则执行 command2
+    # 减少反馈
+        2>/dev/null     # 将错误输出重定向到空设备(不显示,忽略警告)
+            2           # stderr, 标准错误
+            >           # 重定向
+            /dev/null   # 空设备
+        2>&1            # 将标准错误重定向到标准输出的位置
+            &1          # stdout, 标准输出
+
+    # shell 状态码和重定向
+        # 返回码    # 用于函数中返回状态码, 终止函数执行, 0 表示成功, 1-255 表示失败
+        return 0    # 成功
+        return 1    # 一般错误
+        return 2    # 命令参数错误
+        # 退出码
+        exit 1      # 失败退出整个脚本
+        exit 0      # 成功退出
+    ```
+
+- zsh 检验条件的最佳实践
+    - 完整的文件检查(按优先级排序):
+        - `-z, -n` 非空
+        - `-e` 存在
+        - `-f, -d` 类型
+        - `-r. -w, -x` 权限
+        - `-s` 非空(字符,内容)
+    - 判断顺序: 非空且存在 -> 类型检验 -> 权限与内容检验
+        - 对于文件: `[[ -e file && -f file]]`
+        - 对于路径目录: `[[ -e dir && -d dir ]]`
+        - 对于变量: `[[ -n var && -s var ]]`
+
+## Shell 编写惯例
 
 ```bash
 # Shell 变量赋值语法规则
@@ -71,34 +145,39 @@
 
 ---
 
-- 常用函数/方法/语法
+## 常用函数/方法/语法
 
-```bash
-- [ -r "cmd" ]
-    # Shell中文件测试语法( test ), 返回 Boolean 值( 0 = true)
-        -e : 文件或目录是否存在
-        -s : 文件存在且 size > 0
-        -r : 是否可读
-        -w : 是否可写
-        -x : 是否可执行
-        -f : 是否为文件(非目录或设备)
-        -d : 是否为目录
-        -L : 是否为符号链接
-    # 注意: []中文本前后有空格,容易报错的误区
-    # 示例:
-        [[ -r "file" ]] && source "file" || echo "no exist file"  #不推荐
-        # 等价于(更推荐完整写法)
+- `[ -r "cmd" ]`
+    - Shell中文件测试语法( test ), 返回 Boolean 值( 0 = true)
+    - 注意: []中, 文本前后有空格,容易报错的误区
+    - 示例:
+      `[[ -r "file" ]] && source "file" || echo "no exist file"` #不推荐
+    - 等价于(更推荐完整写法)
+        ```bash
         if [[ -r "file" && -s "file" ]]; then
             source "file"
         else
             echo "no exist file"
         fi
+        ```
 
-- # 函数工具检测
+- 函数工具检测
+    ```bash
     if command -v [工具] >/dev/null 2>&1; then
-        执行函数工具
+        # 执行函数工具
     fi
-```
+    ```
+- 终端打印文本颜色
+    - 方法 1:
+        - ANSI 转义码
+        - `echo "\033[31m红色\033[0m"`
+        - 用法: 先定义快捷函数,再使用
+            - `export _RED_='\033[0;31m'`
+            - `export _END='\033[0m'`
+            - `echo " ${_RED_} 红字 {_END} "`
+    - 方法 2 (推荐):
+        - 优点:不用提前定义颜色 ANSI 转义码
+        - `print -P " %F{yellow} 黄字 %f " `
 
 ---
 

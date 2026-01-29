@@ -346,3 +346,35 @@ Node.js 运行环境
         - ORM : Prisma / Mongoose / TypeORM
 
 ```
+- 🔘 Jupyter 笔记
+    - 自动启动jupyterlab的方法
+    ```bash
+    # 配置jupyter
+    -jupyter-server --generate-config  #在.jupyter/中生成jupyter_server_config.py
+    -jupyter-server password ##用密码生成hash密码
+
+    /etc/systemd/system/jupyterlab.service
+
+    jupyterlab.service
+    [Unit]
+    Description=Jupyter Lab
+    After=network.target
+
+    [Service]
+    Type=simple
+    ExecStart=$HOME/.conda/envs/dev-py12/bin/jupyter lab --config=/home/felix/.jupyter/jupyter_lab_config.py
+    User=felix
+    Restart=always
+
+    [Install]
+    WantedBy=multi-user.target
+
+    # 示例:
+    jupyter-lab \
+        --config=/home/felix/.jupyter/jupyter_server_config.py \
+        --allow-root \
+        --no-browser \
+        --ip 0.0.0.0 \
+        --port 8777 \
+        --skip-dev-build \
+    ```

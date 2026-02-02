@@ -1,21 +1,20 @@
-## Terminal Notes
-
-**终端笔记**
-
-[_about_system/about_terminal.md_]
+# Shell Notes
 
 [返回索引](../README.md)
 
-## Bash
+```bash
+- 常用shell
+    - zsh: macOS内置
+    - bash: 老版本macOS使用,Linux默认
+    - fish: 老牌shell
+    - powershell: 主要用于windows系统
+    - busybox shell:
+        - 主要用于服务器端(比如NAS),ash 的二进制版本
+        - /bin/sh
+        - 特点: 语法和zsh不一样, 基本的alias/func类似
+```
 
-- Bash
-    - 系统默认自带 : `/bin/bash`
-    - 安装(不推荐) : `brew install bash`
-    - powershell: windows终端工具
-
----
-
-## ZSH
+## 📒 ZSH
 
 - [zsh](https://www.zsh.org/) ([查看仓库](https://github.com/zsh-users/zsh/tree/master))
     - 系统自带 : `/bin/zsh`
@@ -26,12 +25,21 @@
         - .zshrc : 交互式, 存放别名
 
 - [zinit](https://github.com/zdharma-continuum/zinit):
-    - zsh的美化和自动补全工具
+    - zsh的美化/自动补全/插件管理工具
+    - 类似插件:
+        - antidote: 现代构建模型,生成式工作流
+        - antigen: 老牌轻量级zsh插件管理器
+        - zplug: 另一个zsh插件管理器
+        - oh-my-zsh: 最流行的zsh框架,自带大量主题和插件
+        - 不建议混用, 习惯zinit的情况只用zinit足够
     - 安装见仓库链接
     - 常用zinit命令
         - `zinit compiled` : 列出已编译的插件
         - `zinit delete --clean` : 清除未使用的插件包
         - `zinit update/self-update` : 更新所有插件/或/升级自己
+        - `zinit cd --installed ...` : 进入某个插件工具目录(git 仓库中)
+        - `zinit run ...` : 运行某个插件的脚本文件
+            - 示例: `zinit run romkatv/zsh-bench ./zsh-bench`
 
 - [compinit](https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Initialization)
     - zsh的自动补全,在.zshrc中的顺序如下:
@@ -43,15 +51,62 @@
             - `compinit`
         - 其他自动补全插件
 
-- zint常用插件(直接添加到.zshrc中)
+- zshrc 中的加载顺序
+    - zinit初始化(其中插件分优先级,部分补全可以懒加载以加快shell启动速度)
+        - 使用 zsh-bench 基准测试启动速度
+        - 懒加载补全脚本示例:
+
+            ```bash
+            _lazy_load_completion() {
+                local cmd=$1
+                local completion_cmd=$2
+
+                # 检查命令是否存在
+                if command -v $cmd >/dev/null 2>&1; then
+                    # 创建临时函数，首次调用时加载真正的补全
+                    eval "
+                    $cmd() {
+                        unfunction $cmd
+                        eval \"$completion_cmd\"
+                        $cmd \"\$@\"
+                    }
+                    "
+                fi
+            }
+            _lazy_load_completion comfy 'eval "$(comfy --show-completion zsh)"'
+            ```
+
+    - fpath优先定义
+    - autoload && compinit
+    - zstyle
+    - 动态补全脚本
+
+- zint plugins: 常用插件(直接添加到.zshrc中)
     - `zinit light sindresorhus/pure`
     - `zinit light zsh-users/zsh-syntax-highlighting`
     - `zinit light hlissner/zsh-autopair`
     - `zinit light Aloxaf/fzf-tab`
+    - 基础插件加载方式:
+        - `zinit load`
+        - `zinit light`
+
+- zstyle: zsh 样式设置, 用于调整zsh 行为,特别是补全系统.
+    - 基本语法:
+        - `zstyle ':context:subcontext' key value`
+            - context: 上下文, 可以是通配符 \*
+            - subcontext: 子上下文, 进一步细化
+            - key: 设置的样式选项
+            - value: 样式的值
+    - 示例:
+        - `zstyle ':completion:*' menu select` : 启用菜单选择补全
+        - `zstyle ':completion:*' use-cache on` : 启用补全缓存
+        - `zstyle ':completion:*' cache-path ~/.zsh/cache` : 设置补全缓存路径
+        - `zstyle ':completion:*' completer _complete _ignored` : 定义补全器顺序
 
 - zsh的交互防御
     - 常用方法,在zshrc中加入:
-        - `[[ $- != *i* ]] || return` 如果第1 个条件满足则进入第 2 条件
+        - `[[ $- != *i* ]] || return`
+            - 检查是否为交互式shell, 如果不是则退出脚本
         - `[[ -o interactive ]] || return`
 
 - zsh脚本常用表达式
@@ -93,12 +148,12 @@
         command1 || command2  # command1 失败则执行 command2
     # 减少反馈
         2>/dev/null     # 将错误输出重定向到空设备(不显示,忽略警告)
+            1          # stdout, 标准输出
             2           # stderr, 标准错误
             >           # 重定向
             /dev/null   # 空设备
-        2>&1            # 将标准错误重定向到标准输出的位置
-            &1          # stdout, 标准输出
-
+        2>&1            # 将标准错误重定向到标准输出的位置(2赋值到1)
+            比如: >/dev/null 2>&1, 等同于 &>/dev/null, 禁止所有输出
     # shell 状态码和重定向
         # 返回码    # 用于函数中返回状态码, 终止函数执行, 0 表示成功, 1-255 表示失败
         return 0    # 成功
@@ -121,7 +176,7 @@
         - 对于路径目录: `[[ -e dir && -d dir ]]`
         - 对于变量: `[[ -n var && -s var ]]`
 
-## Shell 编写惯例
+## 📒 Shell 编写惯例
 
 ```bash
 # Shell 变量赋值语法规则
@@ -145,7 +200,7 @@
 
 ---
 
-## 常用函数/方法/语法
+## 📒 常用函数/方法/语法
 
 - `[ -r "cmd" ]`
     - Shell中文件测试语法( test ), 返回 Boolean 值( 0 = true)
@@ -181,7 +236,7 @@
 
 ---
 
-### 📒 常用 Shell 命令
+## 📒 常用 Shell 命令
 
 - `curl`
     - 内建指令, Get a file from an HTTP, HTTPS or FTP server

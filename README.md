@@ -24,7 +24,7 @@ My personal notes & development environment configuration
 <h2 id="system">📒 About System</h2>
 
 - [Homebrew Notes](about_system/about_homebrew.md)
-- [Terminal Notes](about_system/about_terminal.md)
+- [Terminal Notes](about_system/about_shell.md)
 - [Podman Notes](about_system/about_podman.md)
 - [Runpod Notes](about_system/about_runpod.md)
 - [Fedora Notes](about_system/about_fedora.md)

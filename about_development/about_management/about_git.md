@@ -7,6 +7,7 @@
 ---
 
 - 优秀笔记推荐: [查看](https://www.atlassian.com/zh/git/glossary#commands)
+
 - 基本用法
     - `git clone <git>` 克隆仓库
     - `git pull` 拉取最新代码
@@ -20,7 +21,7 @@
         - `git config --list | grep pull` 查看配置
         - `git diff origin/master` 查看差异
 
-- git 创建新仓库(repository)
+- 创建新仓库(repository)
 
     ```bash
     echo "# c6x-mynotes" >> README.md
@@ -32,12 +33,49 @@
     git push -u origin main
     ```
 
-- git 推送仓库(push repository)
+- 推送仓库(push repository)
 
     ```bash
     git remote add origin git@github.com:<git>
     git branch -M main
     git push -u origin main
+    ```
+
+- 新建分支(new branch)
+
+    ```bash
+    git switch -c <new/branch> origin/main
+
+    ## 查看本地 HEAD 相对于 origin/main 的提交（在推送前确认）
+    git log --oneline --graph --decorate origin/main..HEAD
+
+    ## 模拟推送（dry-run）看会做什么
+    git push --dry-run origin <new/branch>
+
+    ## 正式推送
+    git push -u origin <new/branch>
+
+    ## fork并发布到新仓库
+    git remote add myfork git@github.com:yourname/repo.git
+    git push -u myfork <new/branch>
+    ```
+
+- 仅拉取指定目录或文件
+
+    ```bash
+    git fetch origin [branch]  #不改分支
+    git restore --source=origin/[branch] -- path/to/file
+    git restore --source=origin/[branch] --worktree --staged -- path/to/file
+        # 这是覆盖本地(worktree:覆盖工作区, staged: 覆盖暂存区)
+        git stash push -u -m "stash before force replace" #方法2: 先暂存
+        git stash drop  # 再舍弃,不需要恢复本地改动, stash pop
+
+    git commit -m "同步文件"
+
+    # 如果是合并的情况:
+    git restore --source=origin/[branch] --patch -- path/to/file  #针对文件
+    git restore --source=origin/[branch] --patch -- path/to/dir  #针对目录
+
     ```
 
 - 状态查询

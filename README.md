@@ -12,14 +12,12 @@ My personal notes & development environment configuration
 
 ## - Content
 
-    # test
-
 - [About System](#system)
 - [About LLM & AIGC](#llm)
 - [About Development](#dev)
 - [About CGI](#cgi)
 - [About Game Development](#game-dev)
-- [Personal Configuration](#Personal-Configuration)
+- [Personal Configuration](#personal-configuration)
 
 <h2 id="system">📒 About System</h2>
 
@@ -28,48 +26,56 @@ My personal notes & development environment configuration
 - [Podman Notes](about_system/about_podman.md)
 - [Runpod Notes](about_system/about_runpod.md)
 - [Fedora Notes](about_system/about_fedora.md)
+- [NAS Notes](about_system/about_nas.md)
 
 <h2 id="llm">📒 About LLM & AIGC</h2>
 
-[ComfyUI]
+**[ComfyUI]**
 
 - [ComfyUI Index](about_llm/comfyui/comfyui_index.md)
 - [ComfyUI Notes](about_llm/comfyui/about_comfyui.md)
 
-[LLM]
+**[LLM]**
 
 - [LLM Basic](about_llm/llm_basic.md)
 - [MCP Servers Notes](about_llm/about_mcp.md)
 - [Midjourney Notes](about_llm/about_midjourney.md)
 - [Faceswap Notes](about_llm/about_faceswap.md)
 
-[Agent]
+**[Agent]**
 
 - [About Agent](about_llm/about_agent.md)
-- [Github Copilot](about_llm/github_copilot.md)
+- [Agent CLI](about_llm/agent_cli.md)
 - [Agent Rules](about_llm/agent_rules.md)
+- [Github Copilot](about_llm/github_copilot.md)
 - [Ollama Notes](about_llm/about_ollama.md)
 
-[Building]
+**[Building]**
 
 - [LangChain Notes](about_llm/about_langchain.md)
 - [LangFlow Notes](about_llm/about_langflow.md)
 
+**[Skills]**
+
+- [Skills Index](about_llm/about_skills.md)
+- [Skills Detail](about_llm/skills/SKILL.md)
+
 <h2 id="dev">📒 About Development</h2>
 
-[Environment & Management]
+**[Environment & Management]**
 
 - [Mise Notes](about_development/about_management/about_mise.md)
 - [Git Notes](about_development/about_management/about_git.md)
 - [uv Notes](about_development/about_management/about_uv.md)
 - [Conda Notes](about_development/about_management/about_conda.md)
+- [Starship Notes](about_development/about_management/about_starship.md)
 
-[Python]
+**[Python]**
 
 - [Python Basic](about_development/about_python/python_basic.md)
 - [Python Framework Notes](about_development/about_python/python_framework.md)
 
-[JS/TS]
+**[JS/TS]**
 
 - [JavaScript Basic](about_development/about_js/js_basic.md)
 - [Node.js Notes](about_development/about_js/about_nodejs.md)
@@ -79,24 +85,24 @@ My personal notes & development environment configuration
 - [Vite Notes](about_development/about_js/about_vite.md)
 - [Bun Notes](about_development/about_js/about_bun.md)
 
-[Program Language]
+**[Program Language]**
 
 - [Rust Basic](about_development/about_languages/about_rust.md)
 - [Ruby Basic](about_development/about_languages/about_ruby.md)
 - [Markdown Notes](about_development/about_languages/about_md.md)
 
-[Build Tool]
+**[Build Tool]**
 
 - [Tauri Notes](about_development/about_tauri.md)
 - [Svelte Notes](about_development/about_svelte.md)
 - [DevTools Notes](about_development/about_devtools.md)
 
-[Database]
+**[Database]**
 
 - [Database Notes](about_development/about_database/databasic.md)
 - [Nginx Notes](about_development/about_database/about_nginx.md)
 
-[OT]
+**[OT]**
 
 - [Development Basic](about_development/basic.md)
 - [IDE Notes](about_development/about_ide.md)
@@ -105,39 +111,39 @@ My personal notes & development environment configuration
 
 <h2 id="cgi">📒 About CGI</h2>
 
-[Blender]
+**[Blender]**
 
 - [Blender Notes](about_cgi/about_blender.md)
 - [Blender Testing Notes](about_cgi/bl_tstNotes.md)
 
 <h2 id="game-dev">📒 About Game Development</h2>
 
-[Godot]
+**[Godot]**
 
 - [Godot Notes](about_gamedev/godot/about_godot.md)
 - [Godot Samples](about_gamedev/godot/gd_samples.md)
 - [StateMachine Notes](about_gamedev/godot/gd_state_machine.md)
 - [Minigame Notes](about_gamedev/godot/gd_minigame.md)
 
-[OT Engines]
+**[OT Engines]**
 
 - [RPG-Maker-Mz Notes](about_gamedev/about_rpgmaker.md)
 - [OT Game Engine](about_gamedev/OT_gameEngines.md)
 
-## [Personal Configuration]
+<h2 id="personal-configuration">📒 Personal Configuration</h2>
 
-[zsh]
+**[zsh]**
 
 - [zshenv](config101/zsh/zshenv)
 - [zprofile](config101/zsh/zprofile)
 - [zshrc](config101/zsh/zshrc)
 - [comfy.zsh](config101/zsh/comfy.zsh)
 
-[git]
+**[git]**
 
 - [gitignore](config101/git/gitignore)
 
-[vscode & agent]
+**[vscode & Agent]**
 
 - [gh_copilot_agent](config101/gh_copilot_agent)
 - [gh_copilot_instructions](config101/gh_copilot_instructions)
@@ -146,4 +152,8 @@ My personal notes & development environment configuration
 
 ---
 
-[Back Top](#c6x-mynotes)
+<div align="center">
+
+[⬆ Back to Top](#c6x-mynotes)
+
+</div>

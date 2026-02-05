@@ -74,7 +74,7 @@ _node.js 基础笔记[update 2025-01-18]_
 # installation
     npx pnpm@latest-10 dlx @pnpm/exe@latest-10 setup
     npm install -g pnpm@latest-10
-    brew install pnpm
+    brew install pnpm (macos推荐, 如果用mise容易产生路径冲突)
 
 # 常用指令
     pnpm init

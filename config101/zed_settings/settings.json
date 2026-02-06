@@ -1,0 +1,955 @@
+{
+  // ╭────────────────────────────────────╮2026-02-04
+  // ├❯ Zed-User-Setting
+  // ╰───────────────────────────────@c6x─╯MacOS
+  //
+  // ╭－－－－－－－－－－(0)
+  // │> ACP
+  // ╰－－－－－－－－－－－╯
+  // buildin: Codex | ClaudeCode | Gemini
+  "auto_update": false,
+  "agent_servers": {},
+  // ╭－－－－－－－－－－(0)
+  // │> 基础设置
+  // ╰－－－－－－－－－－－╯
+  "base_keymap": "VSCode",
+  "restore_on_startup": "launchpad",
+  "on_last_window_closed": "platform_default",
+  "load_direnv": "disabled",
+  "cursor_shape": "bar",
+  "text_rendering_mode": "subpixel",
+  "restore_on_file_reopen": true,
+  "icon_theme": "Zed (Default)",
+  "snippet_sort_order": "top",
+  "hide_mouse": "on_typing_and_movement",
+  "buffer_line_height": {
+    "custom": 1.4
+  },
+  "buffer_font_features": {
+    "calt": false,
+  },
+  "sticky_scroll": {
+    "enabled": true, //滚动函数标题停留
+  },
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "gutter": {
+    "min_line_number_digits": 0,
+    "line_numbers": true,
+    "folds": true,
+    "runnables": false,
+    "breakpoints": false,
+  },
+  "current_line_highlight": "all",
+  "line_indicator_format": "long",
+  "colorize_brackets": true,
+  "always_treat_brackets_as_autoclosed": true,
+  "soft_wrap": "preferred_line_length",
+  "show_wrap_guides": true,
+  "wrap_guides": [
+    80,
+    100,
+  ],
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "fixed",
+    "background_coloring": "disabled",
+  },
+  // ╭－－－－－－－－－－(0)
+  // │> 面板按钮
+  // ╰－－－－－－－－－－－╯
+  //
+  //··················项目栏
+  "project_panel": {
+    "scrollbar": {
+      "show": "auto"
+    },
+    "bold_folder_labels": true,
+    "show_diagnostics": "errors",
+    "sticky_scroll": false,
+    "button": true,
+    "dock": "right",
+    "entry_spacing": "standard",
+    "auto_fold_dirs": false,
+    "default_width": 200,
+    "folder_icons": false,
+    "file_icons": true,
+    "git_status": true,
+    "hide_hidden": false,
+    "hide_root": false,
+    "sort_mode": "directories_first",
+    "hide_gitignore": false,
+    "indent_guides": {
+      "show": "always",
+    }
+  },
+  //
+  "preview_tabs": {
+    "enable_keep_preview_on_code_navigation": true,
+    "enable_preview_from_project_panel": true,
+    "enable_preview_multibuffer_from_code_navigation": true,
+    "enable_preview_from_file_finder": true,
+    "enable_preview_file_from_code_navigation": true,
+    "enable_preview_from_multibuffer": true,
+    "enabled": true,
+  },
+  "title_bar": {
+    "show_branch_icon": false,
+    "show_menus": true,
+    "show_user_picture": true,
+    "show_onboarding_banner": true,
+    "show_project_items": true,
+    "show_branch_name": true
+  },
+  "debugger": {
+    "save_breakpoints": true,
+    "button": false,
+  },
+  "diagnostics": {
+    "button": true,
+  },
+  "search": {
+    "button": false,
+    "center_on_match": true,
+  },
+  "file_finder": {
+    "git_status": false,
+    "file_icons": true
+  },
+  "scrollbar": {
+    "git_diff": false,
+    "search_results": false,
+    "show": "auto",
+    "diagnostics": "error",
+  },
+  "notification_panel": { // ----- 通知
+    "button": false,
+  },
+  "active_pane_modifiers": {
+    "border_size": 0,
+    "inactive_opacity": 0.8,
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "agent_review": true,
+    "selections_menu": false,
+    "quick_actions": false,
+    "code_actions": false
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": true
+  },
+  "tabs": {
+    "git_status": false,
+    "show_close_button": "hidden",
+    "file_icons": false,
+    "show_diagnostics": "off"
+  },
+  "bottom_dock_layout": "right_aligned",
+  "status_bar": {
+    "active_encoding_button": "enabled",
+    "experimental.show": true,
+    "active_language_button": true,
+    "cursor_position_button": true,
+    "line_endings_button": true,
+  },
+  "outline_panel": {
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true,
+    "button": false,
+    "dock": "right"
+  },
+  // ╭－－－－－－－－－－(0)
+  // │> 终端
+  // ╰－－－－－－－－－－－╯
+  "terminal": {
+    "button": false,
+    "blinking": "on",
+    "cursor_shape": "bar",
+    "font_size": 14,
+    "font_family": "Maple Mono Normal NL NF CN",
+    "keep_selection_on_copy": true,
+    "working_directory": "current_project_directory",
+    "detect_venv": "off", // 建议在单个项目中设置
+    "line_height": "standard",
+    "dock": "bottom",
+    "scrollbar": {
+      "show": "always",
+    },
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+    "copy_on_select": true,
+  },
+  // ╭－－－－－－－－－－(0)
+  // │> 字体
+  // ╰－－－－－－－－－－－╯
+  "ui_font_family": "Maple Mono Normal NL NF CN",
+  "buffer_font_family": "Maple Mono Normal NL NF CN",
+  "ui_font_size": 14.5,
+  "buffer_font_size": 14.5,
+  "agent_ui_font_size": 15.5,
+  "agent_buffer_font_size": 14,
+  "autosave": "on_focus_change",
+  "auto_indent_on_paste": true,
+  "show_whitespaces": "selection",
+  "show_signature_help_after_edits": true,
+  "hover_popover_enabled": true, //提示帮助与延迟设置
+  "hover_popover_delay": 1000,
+  "collaboration_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  // ╭－－－－－－－－－－(0)
+  // │> 主题 🌈
+  // ╰－－－－－－－－－－－╯
+  "theme": "Gruvbox Dark Hard", //主题
+  "lsp_document_colors": "inlay", //颜色提示块
+  "experimental.theme_overrides": {}, //主题覆盖(全局)
+  "theme_overrides": { //主题覆盖(针对某主题)
+    "Gruvbox Dark Hard": { //修改原主题
+      "background.appearance": "opaque",
+      "terminal.background": "#282828",
+      "terminal.foreground": "#bfda99",
+      //
+      //╭·················终端色卡·················╮
+      //
+      "terminal.ansi.dim_yellow": "#EC9A1A",
+      "terminal.ansi.red": "#ff6c52",
+      "terminal.ansi.bright_red": "#FF6F75",
+      "terminal.ansi.magenta": "#C54078",
+      "terminal.ansi.blue": "#4E91FF",
+      "terminal.ansi.bright_blue": "#83c7ff",
+      "terminal.ansi.cyan": "#24BcBD",
+      "terminal.ansi.bright_cyan": "#00E5E5",
+      "terminal.ansi.green": "#00ff00",
+      "terminal.ansi.bright_green": "#8ED621",
+      "terminal.ansi.white": "#DCDCDC",
+      //
+      //╭·················界面·················╮
+      //
+      "border": "#985068af", //界面的线框edge
+      "tab.active_background": "#2d7787", //editor标签
+      "tab.inactive_background": "#5f5f5f3f", //不活跃的标签
+      "title_bar.background": "#1f3f5f", //窗口标题栏(chat内标题)
+      "tab_bar.background": "#2640367f", //窗口标题栏二级栏
+      "status_bar.background": "#1a1a1a", //底部状态栏底色
+      "text.muted": "#ffffff", //界面小标识(比如ai助手模型选择等)
+      "scrollbar.thumb.hover_background": "#FF9B21", //滚动条高亮
+      // "ghost_element.background": "#00ff00", //小标识的底色1
+      // "element.background": "#0000ff", //小标识的底色2
+      "text.placeholder": "#a1a1a1",
+      //
+      //╭·················AI助手窗口·················╮
+      //
+      "text": "#fff3ab",
+      "panel.background": "#343340", //聊天底色
+      "predictive": "#ffbb00af", //内联预测文本
+      //
+      //╭·················代码编辑器·················╮
+      //
+      "background": "#383838cf", //无文档时的空底色
+      "editor.background": "#414545", //代码底色(415653)
+      "panel.overlay_hover": "#ff3f3f5f", //editor顶部代码标题高亮
+      "editor.active_line.background": "#afafaf3f", //当前行高亮
+      "warning.background": "#0000ff3f", //警告底色
+      "error.background": "#af00003f",
+      "players": [
+        {
+          "selection": "#d54a7daf", //48F0914f
+          "cursor": "#00ff00",
+        }
+      ],
+      "editor.invisible": "#dfdfdf", //选择后隐藏元素(比如空格)
+      //
+      //╭·················内联·················╮
+      //
+      "elevated_surface.background": "#5d576b", //内联底色
+      "editor.foreground": "#EFE4B6", //内联选项的字体颜色 ffd92e
+      "ghost_element.hover": "#fc9e4f5f", //内联选项,鼠标高亮
+      "ghost_element.selected": "#3a5a40", //内联选项, 键盘选择高亮
+      //
+      //╭·················搜索·················╮
+      //
+      "toolbar.background": "#5B3977", //搜索栏背景
+      "search.match_background": "#3898ff5f", //搜索结果底色
+      "ghost_element.active": "#0000ff",
+      //
+      //╭·················标尺辅助·················╮
+      //
+      "editor.document_highlight.bracket_background": "#28be76af", // 括号配对
+      "editor.indent_guide_active": "#00ff00af", //活跃的缩进线高亮
+      "editor.wrap_guide": "#4d6676af", //换行标尺线
+      "editor.gutter.background": "#383838", //行号底色
+      // "editor.line_number": "#6f6f6f", //左侧行号文本
+      // "editor.active_line_number": "#00ff00", //左侧行号高亮
+      //
+      //╭·················项目栏·················╮
+      //
+      "element.hover": "#ff3f3f5f", //高亮
+      "element.selected": "#00ff003f", //选中文件高亮
+      "panel.overlay_background": "#2d7787",
+      "panel.indent_guide_hover": "#00ff00",
+      "panel.indent_guide": "#afafaf5f",
+      "panel.indent_guide_active": "#48cae4",
+      // "panel.focused_border": "#ffffff",
+      //
+      //╭·················OT·················╮
+      //
+      "ignored": "#6a9468", //忽略的文件或目录颜色
+      "element.active": "#00ff00af", //编辑菜单的选中项
+      "text.accent": "#00ff00", //已知: md-preview的check box
+      "editor.document_highlight.read_background": "#383838af", // -- md单行代码底色
+      //
+      //╭·················OT·················╮
+      //  ??? 未知参数(dev: open themes preview)面
+      //
+      "unreachable.background": "#0000ff",
+      // "element.background": "#ff0000",//小图标底色
+      "editor.debugger_active_line.background": "#0000ff",
+      "editor.document_highlight.write_background": "#0000ff",
+      "editor.subheader.background": "#005fff5f",
+      "predictive.border": "#0000ff",
+      "accents": [ // ----------- 元素颜色的渐变
+        "#9381ff",
+        "#4361ee",
+        "#118ab2",
+        "#06d6a0",
+        "#3fff3f",
+      ],
+      //
+      //╭·················Syntax 语法色块·················╮
+      //
+      "syntax": { // ------------ 代码颜色(syntax)
+        "comment": { // --------- 注释
+          "color": "#E5A3FF",
+          "font_style": "italic",
+          "font_weight": 300,
+          "background_color": "#1515151f",
+        },
+        "function": { // -------- 函数(def定义的函数)
+          "color": "#FF798B",
+        },
+        "class": { // ----------- 类名(class 定义)
+          "color": "#9AFF73"
+        },
+        "boolean": { // --------- 布尔值
+          "color": "#00ffaf"
+        },
+        "property": { // -------- 参数属性,通常在参数.<text>
+          "color": "#5fdfff",
+        },
+        "keyword": { // --------- 关键字(import, class, def等)
+          "color": "#FF798B",
+        },
+        "string": { // ---------- 字符串
+          "color": "#cfdfcf",
+        },
+        "constant": { // -------- 常量
+          "color": "#ffd92e",
+        },
+        "type": { // ------------ 类型名
+          "color": "#FFFF53",
+        },
+        "variable": { // -------- 普通变量
+          "color": "#9AFF73",
+        },
+        "variable.special": { //  特殊变量(比如: this)
+          "color": "#EAFF73",
+        },
+        "attribute": { // ------- 属性(比如: @classname中的classname)
+          "color": "#00ffff",
+        },
+        "operator": { // -------- 运算符(比如: @)
+          "color": "#00ffff",
+        },
+        "number": { // ---------- 数字
+          "color": "#00ffaf",
+        },
+        "hint": { // ------------ 内联相关(比如lsp自动补全但并非输入的字符)
+          "color": "#99A89D",
+        },
+        "embedded": { // -------- 嵌入: 大括号内的数字
+          "color": "#FFFF53",
+        },
+        "punctuation.delimiter": { // 分隔符(:...)
+          "color": "#00ffff",
+        },
+        "function.builtin": { //  内置参数
+          "color": "#FFFF53"
+        },
+        "instance": { // -------- 特殊符号
+          "color": "#0000ff",
+        },
+        "tag": { // ------------- html-tag(div, a...)
+          "color": "#FF798B",
+        },
+        "primary": { // --------- 未知用 红色代替
+          "color": "#0000ff",
+        },
+        "predictive": { // ------ 未知用 红色代替
+          "color": "#0000ff",
+        },
+        "preproc": { // --------- 未知用 红色代替
+          "color": "#0000ff",
+        },
+      },
+    },
+  },
+  "buffer_font_fallbacks": [
+    "Maple Mono Normal NL NF CN"
+  ],
+  // ╭－－－－－－－－－－(0)
+  // │> Git
+  // ╰－－－－－－－－－－－╯
+  "git": {
+    "git_gutter": "hide", //隐藏git在gutter的行为
+    "inline_blame": {
+      "enabled": false,
+    },
+    "branch_picker": {
+      "show_author_name": true
+    },
+  },
+  "git_panel": {
+    "tree_view": false,
+    "button": true,
+    "dock": "right",
+  },
+  // ╭－－－－－－－－－－(0)
+  // │> file_types 文件关联类型
+  // ╰－－－－－－－－－－－╯
+  "file_types": {
+    "Shell Script": [
+      "config",
+    ],
+  },
+  "format_on_save": "on",
+  "tab_size": 4,
+  "preferred_line_length": 80,
+  "prettier": {
+    "allowed": true,
+  },
+  //内联补全占位符,建议false(减少视觉干扰)
+  "inlay_hints": {
+    "enabled": false,
+    "show_background": false,
+    // "show_parameter_hints": false,
+    // "show_type_hints": false,
+    // "show_other_hints": false,
+  },
+  // ╭－－－－－－－－－－(0)
+  // │> Languages
+  // ╰－－－－－－－－－－－╯
+  "languages": {
+    //··················jsonc
+    "Markdown-Inline": {
+      "allow_rewrap": "anywhere",
+      "soft_wrap": "editor_width"
+    },
+    "JSONC": {
+      "tab_size": 2,
+      "soft_wrap": "editor_width",
+      "indent_guides": {
+        "background_coloring": "indent_aware",
+      },
+      "formatter": "language_server",
+    },
+    //··················json
+    "JSON": {
+      "tab_size": 2,
+      "formatter": "language_server",
+      "indent_guides": {
+        "background_coloring": "indent_aware",
+      },
+    },
+    //··················python
+    "Python": {
+      "inlay_hints": {
+        "enabled": false, //lsp的内联补充,有点干扰
+      },
+      "enable_language_server": true,
+      "language_servers": [
+        "ty",
+        "ruff",
+        "black",
+      ],
+      // "formatter": {
+      //   "external": {
+      //     "command": "black",
+      //     "arguments": [
+      //       "--stdin-filename",
+      //       "{buffer_path}",
+      //       "-"
+      //     ]
+      //   }
+      // },
+    },
+    // ··················Rust
+    "Rust": {
+      "preferred_line_length": 100,
+      "soft_wrap": "preferred_line_length",
+      "formatter": [
+        // {
+        //   "external": {
+        //     "command": "rustfmt"
+        //   }
+        // }
+        {
+          "language_server": {
+            "name": "rust-analyzer",
+          }
+        },
+        {
+          "code_action": "source.organizeImports",
+        },
+      ]
+    },
+    //··················toml
+    "TOML": {
+      "colorize_brackets": true,
+      "format_on_save": "on",
+      "enable_language_server": true,
+      "language_servers": [
+        "tombi"
+      ],
+      "formatter": "language_server",
+      "indent_guides": {
+        "background_coloring": "indent_aware",
+      },
+    },
+    "YAML": {
+      "indent_guides": {
+        "background_coloring": "indent_aware",
+      },
+      "formatter": "language_server"
+    },
+    //··················shell Script
+    "Shell Script": {
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          "arguments": [
+            "--filename",
+            "{buffer_path}",
+            "--indent",
+            "4"
+          ]
+        }
+      },
+      "indent_guides": {
+        "background_coloring": "indent_aware",
+      }
+    },
+    //··················markdown
+    "Markdown": {
+      "format_on_save": "on",
+      "indent_guides": {
+        "background_coloring": "indent_aware",
+      },
+      "prettier": {
+        "allowed": true
+      },
+      "language_servers": [
+        "marksman"
+      ],
+      "soft_wrap": "editor_width",
+      "preferred_line_length": 88,
+      "inlay_hints": {
+        "enabled": true
+      }
+    },
+    "Git Ignore": {
+      "formatter": "language_server"
+    }
+  },
+  // ╭－－－－－－－－－－(0)
+  // │> LSP
+  // ╰－－－－－－－－－－－╯
+  "lsp": {
+    //··················python-basedpyright
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis.typeCheckingMode": false,
+        "reportMissingImports": false
+      },
+    },
+    //··················yaml
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "keyOrdering": true,
+          "format": {
+            "singleQuote": false
+          },
+          "schemas": {
+            "https://getcomposer.org/schema.json": [
+              "/*"
+            ],
+            "../relative/path/schema.json": [
+              "/config*.yaml"
+            ]
+          }
+        }
+      }
+    },
+    //··················Rust
+    "rust-analyzer": {
+      "initialization_options": {
+        "diagnostics": {
+          "experimental": {
+            "enable": true
+          }
+        },
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        },
+        "procMacro": {
+          "enable": true
+        },
+        "imports": {
+          "granularity": {
+            "group": "module"
+          },
+          "prefix": "self",
+          "merge": {
+            "glob": false
+          },
+          "preferNoStd": true
+        },
+        "check": {
+          "allTargets": false,
+          "command": "clippy",
+        }
+      }
+    }
+  },
+  // ╭－－－－－－－－－－(🤖)
+  // │> AI Agent
+  // ╰－－－－－－－－－－－╯
+  //
+  "disable_ai": false,
+  //··················编辑预测,推荐 subtle
+  "edit_predictions": {
+    "disabled_globs": [],
+    "provider": "copilot",
+    "mode": "subtle",
+    "enabled_in_text_threads": true,
+    "copilot": {
+      "enable_next_edit_suggestions": true,
+    },
+    "show_completions_on_input": true,
+    "show_completion_documentation": true,
+    "completion_menu_scrollbar": "always",
+    "extend_comment_on_newline": true,
+}
+    //··················Agent
+    "agent": {
+      "default_view": "thread",
+      "dock": "left",
+      "agents_panel_dock": "right",
+      "button": false,
+      "notify_when_agent_waiting": "never",
+      "use_modifier_to_send": true,
+      "always_allow_tool_actions": true,
+      "message_editor_min_lines": 4,
+      "show_turn_stats": true,
+      "enable_feedback": false,
+      //··················默认聊天模型
+      "default_model": {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini",
+      },
+      //··················内联助手模型
+      "inline_assistant_use_streaming_tools": true,
+      "inline_assistant_model": {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini",
+      },
+      //··················内联多种模型同时提供不同版本
+      "inline_alternatives": [
+        {
+          "provider": "FxGLM",
+          "model": "GLM-4.7-Flash"
+        },
+      ],
+      //··················git提交消息模型
+      "commit_message_model": {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini"
+      },
+      //··················线程摘要模型
+      "thread_summary_model": {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini",
+      },
+      //··················收藏 agent
+      "favorite_models": [
+        {
+          "provider": "copilot_chat",
+          "model": "claude-sonnet-4.5"
+        },
+        {
+          "provider": "copilot_chat",
+          "model": "gpt-5.2"
+        },
+        {
+          "provider": "copilot_chat",
+          "model": "gpt-5-mini"
+        },
+        {
+          "provider": "copilot_chat",
+          "model": "claude-haiku-4.5"
+        }
+      ],
+      //··················自定义智能体agent
+      "default_profile": "c6x",
+      "profiles": {
+        "c6x-edit": {
+          "name": "c6x-edit",
+          "tools": {
+            "delete_path": false,
+            // 允许使用的工具
+            "thinking": true,
+            "save_file": true,
+            "terminal": true,
+            "edit_file": true,
+            "move_path": true,
+            "diagnostics": true,
+            "fetch": true,
+            "find_path": true,
+            "grep": true,
+            "list_directory": true,
+            "now": true,
+            "open": true,
+            "read_file": true,
+            "web_search": true,
+            "copy_path": true,
+            "create_directory": true
+          },
+          "enable_all_context_servers": false,
+          "context_servers": {},
+          "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-haiku-4.5"
+          }
+        },
+        "c6x-thk": {
+          "name": "c6x-thk",
+          "tools": {
+            "delete_path": false,
+            "edit_file": false,
+            "move_path": false,
+            "create_directory": false,
+            // 允许使用的工具
+            "thinking": true,
+            "save_file": true,
+            "terminal": true,
+            "diagnostics": true,
+            "fetch": true,
+            "find_path": true,
+            "grep": true,
+            "list_directory": true,
+            "now": true,
+            "open": true,
+            "read_file": true,
+            "web_search": true,
+            "copy_path": true,
+          },
+          "enable_all_context_servers": false,
+          "context_servers": {},
+          "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-haiku-4.5"
+          }
+        },
+        "c6x": {
+          "name": "c6x",
+          "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-haiku-4.5",
+          },
+          "tools": {
+            "save_file": false,
+            "edit_file": false,
+            "move_path": false,
+            "delete_path": false,
+            "terminal": false,
+            "thinking": false,
+            // 允许使用的工具
+            "diagnostics": true,
+            "fetch": true,
+            "find_path": true,
+            "grep": true,
+            "list_directory": true,
+            "now": true,
+            "open": true,
+            "read_file": true,
+            "web_search": true,
+            "copy_path": true,
+            "create_directory": false,
+          },
+        }
+      },
+    },
+    // ╭－－－－－－－－－－(0)
+    // │> LLM
+    // ╰－－－－－－－－－－－╯
+    "language_models": {
+      "openai_compatible": {
+        "FxGLM": {
+          "api_url": "https://open.bigmodel.cn/api/coding/paas/v4",
+          "available_models": [
+            {
+              "name": "GLM-4.7",
+              "display_name": "glm-4.7 [10~17元]",
+              "max_tokens": 128000,
+              "capabilities": {
+                "tools": true,
+                "images": true,
+                "parallel_tool_calls": true,
+                "prompt_cache_key": true,
+                "chat_completions": true
+              }
+            },
+            {
+              "name": "GLM-4.7-FlashX",
+              "display_name": "glm-4.7-FlashX [3元]",
+              "max_tokens": 128000,
+              "capabilities": {
+                "tools": true,
+                "images": true,
+                "parallel_tool_calls": true,
+                "prompt_cache_key": true,
+                "chat_completions": true
+              }
+            },
+            {
+              "name": "GLM-4.7-Flash",
+              "display_name": "glm-4.7-Flash [free]",
+              "max_tokens": 128000,
+              "capabilities": {
+                "tools": true,
+                "images": true,
+                "parallel_tool_calls": true,
+                "prompt_cache_key": true,
+                "chat_completions": true
+              }
+            },
+          ]
+        },
+        "FxMoonShot": {
+          "api_url": "https://api.moonshot.cn/v1",
+          "available_models": [
+            {
+              "name": "kimi-k2-0905-preview",
+              "display_name": "kimi-k2-0905 [20元]",
+              "max_tokens": 262000,
+              "capabilities": {
+                "tools": true,
+                "images": false,
+                "parallel_tool_calls": true,
+                "prompt_cache_key": true,
+                "chat_completions": true
+              }
+            },
+            {
+              "name": "kimi-k2.5",
+              "display_name": "kimi-k2.5 [25元]",
+              "max_tokens": 262000,
+              "capabilities": {
+                "tools": true,
+                "images": false,
+                "parallel_tool_calls": true,
+                "prompt_cache_key": true,
+                "chat_completions": true
+              }
+            }
+          ]
+        },
+      }
+    },
+    // ╭－－－－－－－－－－(0)
+    // │> ssh remote
+    // ╰－－－－－－－－－－－╯
+    "ssh_connections": [
+      {
+        "nickname": "📒 Fedora >>",
+        "host": "192.168.0.121",
+        "username": "felix",
+        "port": 22,
+        "args": [],
+        "projects": [
+          {
+            "paths": [
+              "/home/felix"
+            ]
+          },
+          {
+            "paths": [
+              "/home/felix/.zsh"
+            ]
+          },
+          {
+            "paths": [
+              "/home/felix/C6X_Fedora"
+            ]
+          },
+          {
+            "paths": [
+              "/run/media/felix/Felix2T/Comfy2T/"
+            ]
+          }
+        ],
+      },
+      {
+        "nickname": "📒 NAS >>",
+        "host": "192.168.0.101",
+        "username": "sshd",
+        "port": 22,
+        "args": [],
+        "projects": [
+          {
+            "paths": [
+              "/shares/Public"
+            ]
+          }
+        ]
+      }
+    ],
+    // ╭－－－－－－－－－－(0)
+    // │> MCP
+    // ╰－－－－－－－－－－－╯
+    "context_servers": {
+      "mcp-server-context7": {
+        "enabled": false,
+        "settings": {}
+      },
+      "mcp-server-sequential-thinking": {
+        "env": {},
+        "enabled": true,
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ]
+      }
+    },
+    // ╭－－－－－－－－－－(0)
+    // │> 文件/目录
+    // ╰－－－－－－－－－－－╯
+    "hidden_files": [ // --------- 不显示文件类型
+      "**/._*"
+    ],
+  }

@@ -2,52 +2,52 @@
 
 ## 📒 src-tauri
 
-_用于 Tauri 项目的 Rust 代码，包含了 Tauri 的核心功能和逻辑实现_
+> 用于 Tauri 项目的 Rust 代码，包含了 Tauri 的核心功能和逻辑实现
 
-- Cargo.toml
-    - 系统托盘 (Tray)
-        - 托盘图标功能需要在 Cargo.toml 中启用 `tray-icon` 功能：
+### 1. src-tauri/Cargo.toml
+#### ✅ 系统托盘 (Tray)
+- 托盘图标功能需要在 Cargo.toml 中启用 `tray-icon` 功能：
 
-        ```toml
-        [dependencies]
-        tauri = { version = "2", features = ["tray-icon"] }
-        ```
+    ```toml
+    [dependencies]
+    tauri = { version = "2", features = ["tray-icon"] }
+    ```
 
-- main.rs
-    - 系统托盘 (Tray)
-        - 在 main.rs 中设置系统托盘图标和菜单：
-        - 版本 A:
+### 2. src-tauri/src/lib.rs
+#### ✅ 系统托盘 (Tray)
+- 在 lib.rs 中设置系统托盘图标和菜单：
+- 版本 A:
 
-        ```rust
-        <!-- 版本 A -->
-        use tauri::{CustomMenuItem, SystemTray, SystemTrayMenu, SystemTrayEvent};
+    ```rust
+    <!-- 版本 A -->
+    use tauri::{CustomMenuItem, SystemTray, SystemTrayMenu, SystemTrayEvent};
 
-        fn main() {
-            let tray_menu = SystemTrayMenu::new()
-                .add_item(CustomMenuItem::new("show".to_string(), "Show"))
-                .add_item(CustomMenuItem::new("quit".to_string(), "Quit"));
+    fn main() {
+        let tray_menu = SystemTrayMenu::new()
+            .add_item(CustomMenuItem::new("show".to_string(), "Show"))
+            .add_item(CustomMenuItem::new("quit".to_string(), "Quit"));
 
-            let system_tray = SystemTray::new().with_menu(tray_menu);
+        let system_tray = SystemTray::new().with_menu(tray_menu);
 
-            tauri::Builder::default()
-                .system_tray(system_tray)
-                .on_system_tray_event(|app, event| match event {
-                    SystemTrayEvent::MenuItemClick { id, .. } => {
-                        if id.as_str() == "show" {
-                            let window = app.get_window("main").unwrap();
-                            window.show().unwrap();
-                        } else if id.as_str() == "quit" {
-                            std::process::exit(0);
-                        }
+        tauri::Builder::default()
+            .system_tray(system_tray)
+            .on_system_tray_event(|app, event| match event {
+                SystemTrayEvent::MenuItemClick { id, .. } => {
+                    if id.as_str() == "show" {
+                        let window = app.get_window("main").unwrap();
+                        window.show().unwrap();
+                    } else if id.as_str() == "quit" {
+                        std::process::exit(0);
                     }
-                    _ => {}
-                })
-                .run(tauri::generate_context!())
-                .expect("error while running tauri application");
-        }
-        ```
+                }
+                _ => {}
+            })
+            .run(tauri::generate_context!())
+            .expect("error while running tauri application");
+    }
+    ```
 
-        - 版本 B:
+- 版本 B:
 
         ```rust
         <!-- 版本 B -->
@@ -117,4 +117,4 @@ _用于 Tauri 项目的 Rust 代码，包含了 Tauri 的核心功能和逻辑�
 
 ## 📒 src
 
-_用于 Tauri 项目的前端代码，通常包含了应用的界面和交互逻辑_
+> 用于 Tauri 项目的前端代码，通常包含了应用的界面和交互逻辑

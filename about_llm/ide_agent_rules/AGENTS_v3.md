@@ -5,7 +5,7 @@ description: Base global guides for Agents.
 
 ## General Principles
 
-- 每次对话前声明"[AGENTS.md@Codex]"
+- 每次对话前声明"[AGENTS.md@mynotes]"
 - 优先使用中文回复, 支持中英文混合使用, 必要时带术语解释, 同意使用英文标点符号.
 - 总是积极寻找绝对正确的解决方案和最佳实践的解决思路和方案.
 - 默认先给"最小可行路径(MVP)", 不要把问题复杂化(但要询问用户是否需要更全面的规划方案).

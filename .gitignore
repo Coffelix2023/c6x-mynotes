@@ -3,7 +3,7 @@
 # >>>>>>>> custom
 **/.mydocs
 **/.mysecret
-
+**/.kontext
 # >>>>>>>> system
 .DS_Store
 .AppleDouble

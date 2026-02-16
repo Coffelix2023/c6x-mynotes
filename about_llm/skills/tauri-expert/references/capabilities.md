@@ -41,6 +41,26 @@
 }
 ```
 
+### 3. 核心窗口控制权限 (V2 必备)
+
+如果前端需要直接控制窗口位置 (如手写平滑移动动画) 或读取精确尺寸，需显式授权：
+
+```json
+{
+  "windows": ["main", "note-*"],
+  "permissions": [
+    "core:window:allow-set-position",
+    "core:window:allow-outer-position",
+    "core:window:allow-outer-size"
+  ]
+}
+```
+
+> [!IMPORTANT]
+>
+> - **Windows 通配符**: 支持通配符 (如 `note-*`)，方便一次性授权给动态生成的同类窗口。
+> - **权限语义**: 未授权 `allow-set-position` 时，前端调用 `setPosition` 会触发 `Unhandled Promise Rejection`。
+
 ## 权限说明
 
 - `identifier`: 权限的唯一标识。

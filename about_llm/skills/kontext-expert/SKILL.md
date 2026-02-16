@@ -1,9 +1,9 @@
 ---
-name: kontext-expert-zh
+name: kontext-expert
 description: 双层结构化长效记忆专家 (Kontext-Aware)
 ---
 
-# Kontext 专家技能 (kontext-expert-zh)
+# Kontext 专家技能 (kontext-expert)
 
 本技能旨在为 Agent (Antigravity) 提供**持久化的双层结构化记忆**. 它通过“数据层”保证逻辑严密性，通过“表现层”提供人类可读的视觉概览，解决长周期任务中的记忆流失问题。
 
@@ -13,8 +13,8 @@ description: 双层结构化长效记忆专家 (Kontext-Aware)
 ## 1. 核心概念
 
 - **双层记忆 (Dual-Layer Memory)**:
-  - **Data Layer (JSONL)**: 存储原始数据，保证哈希 ID (`kx-a1b2`) 和依赖关系的机器可读性。
-  - **View Layer (Markdown)**: 在 `.kontext/README.md` 中动态展示 Mermaid 依赖图和高风险标记。
+    - **Data Layer (JSONL)**: 存储原始数据，保证哈希 ID (`kx-a1b2`) 和依赖关系的机器可读性。
+    - **View Layer (Markdown)**: 在 `.kontext/README.md` 中动态展示 Mermaid 依赖图和高风险标记。
 - **Zero Conflict (零冲突)**: 基于哈希的短 ID 确保多 Agent/多分支协作时任务标识不冲突。
 - **无损传递**: 通过 Git 驱动的 `.kontext/` 目录，让不同会话之间能无损接收任务上下文。
 
@@ -22,10 +22,10 @@ description: 双层结构化长效记忆专家 (Kontext-Aware)
 
 ### 推荐触发语 (记忆整理视角)
 
-- **记忆固化**: "整理记忆", "强调上下文", "固化当前进度".
-- **对抗遗忘**: "同步长期记忆", "整理 Kontext".
-- **逻辑可视化**: "展示记忆依赖图", "更新 README 概览".
-- **任务收官**: "持久化 Kontext", "打包记忆链条".
+- **记忆固化**: "整理记忆", "强调记忆".
+- **对抗遗忘**: "整理长期记忆", "整理上下文".
+- **逻辑对齐**: "同步记忆", "恢复记忆", "展示记忆".
+- **任务收官**: "持久化记忆", "打包记忆", "打包上下文".
 
 ## 3. 文件存放规范
 
@@ -54,6 +54,6 @@ description: 双层结构化长效记忆专家 (Kontext-Aware)
 
 ## 5. 提示词建议
 
-- "请将目前的开发逻辑固化为 Kontext，并展示 Mermaid 依赖图"
-- "当前的上下文太长了，请进行双层记忆整理"
-- "检查并更新 `.kontext/README.md`，同步最新的任务进度"
+- "深度记忆整理, 防止逻辑混乱"
+- "当前的上下文太长了, 请将记忆结构化存储"
+- "展示一下目前的长期记忆依赖图"

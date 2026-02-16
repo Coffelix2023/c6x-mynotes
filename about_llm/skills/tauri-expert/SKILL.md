@@ -37,7 +37,8 @@ description: 专门用于帮助开发者使用 Tauri (重点 v2) 进行跨平台
 
 - [CLI 手册 (pnpm 优先)](file:///Users/felix/.gemini/antigravity/skills/tauri-expert/references/cli.md)
 - [安全能力配置模板](file:///Users/felix/.gemini/antigravity/skills/tauri-expert/references/capabilities.md)
-- [Rust/TS 交互模式与中文注释示例](file:///Users/felix/.gemini/antigravity/skills/tauri-expert/references/api_patterns.md)
+- [高级 UI 与设计系统规范](file:///Users/felix/.gemini/antigravity/skills/tauri-expert/references/design_system.md)
+- [Rust/TS 交互模式与托盘事件示例](file:///Users/felix/.gemini/antigravity/skills/tauri-expert/references/api_patterns.md)
 
 ---
 *注：当遇到不确定的参数或过时的语法时，请主动引导用户查阅官方文档或使用此技能提供的最新参考。*

@@ -1,5 +1,5 @@
 ---
-name: writing-plans-zh
+name: writing-plans
 description: 当你已经有了多步任务的规格说明或需求,但在动手写代码之前,请使用此技能编写实施计划.
 ---
 
@@ -11,7 +11,7 @@ description: 当你已经有了多步任务的规格说明或需求,但在动手
 
 假设开发者技术娴熟,但对我们的工具集或问题领域几乎一无所知. 假设他们不太擅长良好的测试设计.
 
-**启动声明:** "我正使用 writing-plans-zh 技能来创建实施计划."
+**启动声明:** "我正使用 writing-plans 技能来创建实施计划."
 
 **上下文:** 此计划应在专门的工作区执行 (通过 brainstorming 技能创建).
 
@@ -20,6 +20,7 @@ description: 当你已经有了多步任务的规格说明或需求,但在动手
 ## 小型任务粒度 (Bite-Sized Task Granularity)
 
 **每一步应为一个独立的动作 (2-5 分钟):**
+
 - "编写失败的测试" —— 步骤
 - "运行测试以确保其失败" —— 步骤
 - "实现最简代码使测试通过" —— 步骤
@@ -50,6 +51,7 @@ description: 当你已经有了多步任务的规格说明或需求,但在动手
 ### 任务 N: [组件名称]
 
 **涉及文件:**
+
 - 新建: `exact/path/to/file.py`
 - 修改: `exact/path/to/existing.py:123-145`
 - 测试: `tests/exact/path/to/test.py`
@@ -88,6 +90,7 @@ git commit -m "feat: add specific feature"
 ````
 
 ## 注意事项 (Remember)
+
 - 始终使用精确的文件路径.
 - 计划中提供完整的代码 (不要只写 "添加验证").
 - 提供精确的命令及预期输出.
@@ -107,10 +110,12 @@ git commit -m "feat: add specific feature"
 **请问选择哪种方式?"**
 
 **如果选择子代理驱动:**
+
 - **必需子技能:** 使用 superpowers:subagent-driven-development
 - 留在当前会话.
 - 每个任务指派新的子代理 + 代码评审.
 
 **如果选择并行会话:**
+
 - 引导用户在工作区开启新会话.
 - **必需子技能:** 新会话使用 superpowers:executing-plans

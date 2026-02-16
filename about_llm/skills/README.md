@@ -15,7 +15,7 @@
 
 目录（按功能分组）
 
-## 🚀 核心与策略 (Core & Strategy)
+## 核心与策略 (Core & Strategy)
 
 - **using-superpowers**: 技能发现与调度的枢纽；在对话开始时选择与加载合适的技能与工作流。
 - **brainstorming**: 系统化需求分析与创意发散，用于在执行前明确目标与约束。
@@ -23,7 +23,7 @@
 - **executing-plans**: 将已批准计划系统化执行的流程与监控机制。
 - **subagent-driven-development**: 使用独立子代理并行拆分任务、协调交付的实践与模式。
 
-## 💻 工程与语言 (Engineering & Languages)
+## 工程与语言 (Engineering & Languages)
 
 - **typescript-pro**: 现代 TypeScript 开发实践、类型设计与工程化建议。
 - **javascript-pro**: JavaScript 工程实战、兼容性与性能优化要点。
@@ -33,7 +33,7 @@
 - **tauri-expert**: 使用 Tauri 构建跨平台桌面应用的实践要点。
 - **mcp-builder**: 多组件项目脚手架与自动化构建流程模板。
 
-## 🎨 设计与创意 (Design & Creative)
+## 设计与创意 (Design & Creative)
 
 - **frontend-design**: 面向生产级 UI/UX 的设计系统与可实现规范。
 - **canvas-design**: 可用于海报、插画与视觉排版的设计流程与资源建议。
@@ -41,7 +41,7 @@
 - **imagen**: 基于 Imagen 模型的视觉原型、图标与素材生成参考。
 - **brand-guidelines**: 企业品牌一致性检查与视觉识别 (VI) 实施要点。
 
-## 🔍 专业领域 (Specialized Domains)
+## 专业领域 (Specialized Domains)
 
 - **deep-research**: 深度研究与情报收集代理，包含市场/竞争/文献汇总方法。
 - **architecture-designer**: 系统架构设计、模式评审与 ADR（决策记录）模板。
@@ -53,7 +53,7 @@
 - **kontext-expert**: 上下文管理、检索增强生成（RAG）与文档片段工程实践。
 - **xiaohongshu-recruiter**: 针对小红书等社交平台的内容/人才筛选与策略支持（行业专用）。
 
-## 📋 通用工具 (Utilities)
+## 通用工具 (Utilities)
 
 - **hello-skill**: 会话启动与技能加载状态的标准化声明。
 - **skill-creator**: 用于快速创建/扩展 skill 架构与元数据的工具/模板说明。
